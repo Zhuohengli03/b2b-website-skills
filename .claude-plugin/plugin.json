@@ -1,7 +1,7 @@
 {
   "name": "b2b-website-skills",
   "displayName": "b2b-website-skills · 出海 B2B 建站 Agent 流水线",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Lets your factory or trading company build its own overseas B2B lead-gen website: 11 agent skills that run a 10-role pipeline (PM, research, planning, copy, design, frontend, backend, SEO, QA, post-launch growth) from a brief you fill in yourself. Works with Claude Code, OpenClaw, Codex.",
   "license": "MIT",
   "keywords": ["b2b", "website", "lead-generation", "seo", "agent-skills", "外贸建站", "独立站", "出海"],
