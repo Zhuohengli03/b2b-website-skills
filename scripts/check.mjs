@@ -55,7 +55,7 @@
  * │ PERF-LCP         │ P2 │ perf     │ --perf：LCP > 2.5 s                                         │ skills/b2b-qa-tester/SKILL.md › 测试清单 D                  │
  * │ RENDER-MOTION    │ P2 │ render   │ --shots：reduced-motion 下仍有可见元素 animation（时长>50ms）    │ skills/b2b-qa-tester/references/可用性与可访问性检查项.md › 可访问性 · 动效敏感 │
  * │                  │    │          │ 或 transition-duration > 50ms                               │                                                          │
- * │ STYLE-EMOJI      │ P2 │ style    │ --shots：文本节点含 emoji 码点                                │ skills/b2b-site-diagnosis/references/客户速查与自查.md › AI 建站的惯性毛病自查 · emoji 当图标 │
+ * │ STYLE-EMOJI      │ P2 │ style    │ --shots：文本节点含 emoji 码点                                │ skills/b2b-site-diagnosis/references/公司分型速查与自查.md › AI 建站的惯性毛病自查 · emoji 当图标 │
  * │ TOOL-RUN         │ P2 │ perf     │ --perf / --shots / --online 未能运行（Playwright 缺失等）       │ scripts/check.mjs 文件头                                   │
  * └──────────────────┴────┴──────────┴──────────────────────────────────────────────────────────┴──────────────────────────────────────────────────────────┘
  *
@@ -126,7 +126,7 @@ const RULES = {
   'PERF-HOME-BYTES':   { level: 'P2', cat: 'perf',     rule: '体积',     docs: D.qaD },
   'PERF-LCP':          { level: 'P2', cat: 'perf',     rule: 'LCP',     docs: D.qaD },
   'RENDER-MOTION':     { level: 'P2', cat: 'render',   rule: '动效',     docs: D.a11y + ' · 动效敏感' },
-  'STYLE-EMOJI':       { level: 'P2', cat: 'style',    rule: 'emoji',   docs: 'skills/b2b-site-diagnosis/references/客户速查与自查.md › AI 建站的惯性毛病自查 · emoji 当图标' },
+  'STYLE-EMOJI':       { level: 'P2', cat: 'style',    rule: 'emoji',   docs: 'skills/b2b-site-diagnosis/references/公司分型速查与自查.md › AI 建站的惯性毛病自查 · emoji 当图标' },
   'TOOL-RUN':          { level: 'P2', cat: 'perf',     rule: '性能',     docs: 'scripts/check.mjs 文件头' },
 };
 const LEGACY_RULE_TO_ID = { ...Object.fromEntries(Object.entries(RULES).map(([id, r]) => [r.rule, id]).reverse()), '死链': 'LINK-DEAD', 'H1': 'SEO-H1', '表单': 'FORM-ENDPOINT', 'title': 'SEO-TITLE-LEN', 'description': 'SEO-DESC-LEN', 'canonical': 'SEO-CANONICAL', 'lang': 'SEO-LANG', 'CTA堆叠': 'CTA-STACK', '占位': 'CONTENT-TODO', 'alt': 'A11Y-ALT', '外部资源': 'PERF-EXT-RESOURCE', 'sitemap': 'SEO-SITEMAP', 'robots': 'SEO-ROBOTS', 'JSON-LD': 'SCHEMA-PARSE', '体积': 'PERF-HOME-BYTES', 'LCP': 'PERF-LCP', '性能': 'TOOL-RUN' };

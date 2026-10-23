@@ -29,8 +29,8 @@
       "items": [
         { "q": "Can you provide an EN 10204 3.1 inspection certificate?", "a": "Yes. A 3.1 inspection certificate reports the chemical composition and mechanical test results of the delivered lot and is issued per batch [待确认：是否每批默认提供，D11]. A redacted sample is on the Quality & Downloads page; request one for a specific size with the button on each model page." },
         { "q": "Do you provide CBAM emission data?", "a": "CBAM embedded-emission data for EU importers is available on request [待确认：D13]. The HS code (heading 7318) and the duty rate applicable at your destination are confirmed on the quotation." },
-        { "q": "Zylinderschrauben mit Innensechskant DIN 912 — do you supply German distributors?", "a": "Yes. Zylinderschrauben mit Innensechskant DIN 912 / ISO 4762 are our first product group, Germany is our largest export market, and customers include a German fastener distributor [待确认：客户名，D5]. Correspondence is in English." },
-        { "q": "Śruby imbusowe DIN 912 — do you ship to Poland?", "a": "Yes. Śruby imbusowe (socket head cap screws) and śruby kołnierzowe (flange bolts DIN 6921) ship to Poland regularly; an agricultural machinery manufacturer in Poland [待确认：客户名，D5] is among our customers. Correspondence is in English." }
+        { "q": "Zylinderschrauben mit Innensechskant DIN 912 — do you supply German distributors?", "a": "Yes. Zylinderschrauben mit Innensechskant DIN 912 / ISO 4762 are our first product group, Germany is our largest export market, and customers include a German fastener distributor [待确认：买家名，D5]. Correspondence is in English." },
+        { "q": "Śruby imbusowe DIN 912 — do you ship to Poland?", "a": "Yes. Śruby imbusowe (socket head cap screws) and śruby kołnierzowe (flange bolts DIN 6921) ship to Poland regularly; an agricultural machinery manufacturer in Poland [待确认：买家名，D5] is among our customers. Correspondence is in English." }
       ]
     }
   ],

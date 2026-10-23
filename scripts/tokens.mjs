@@ -226,7 +226,7 @@ async function main() {
   primaryHex = rgbToHex(hexToRgb(primaryHex));
   const pBase = hexToOklch(primaryHex);
   let accentHex = opt('--accent', null), neutralHex = opt('--neutral', null);
-  if (accentHex) accentHex = rgbToHex(hexToRgb(accentHex)); else { accentHex = oklchToHex({ L: 0.72, C: Math.max(0.12, Math.min(0.16, pBase.C)), h: (pBase.h + 180) % 360 }); meta.notes.push(`强调色 ${accentHex} 是按主色互补色相推算的，不是客户给的——设计确认后用 --accent 覆盖`); }
+  if (accentHex) accentHex = rgbToHex(hexToRgb(accentHex)); else { accentHex = oklchToHex({ L: 0.72, C: Math.max(0.12, Math.min(0.16, pBase.C)), h: (pBase.h + 180) % 360 }); meta.notes.push(`强调色 ${accentHex} 是按主色互补色相推算的，不是你给的——设计确认后用 --accent 覆盖`); }
   if (neutralHex) neutralHex = rgbToHex(hexToRgb(neutralHex)); else { neutralHex = oklchToHex({ L: 0.22, C: 0.012, h: pBase.h }); meta.notes.push(`中性灰 ${neutralHex} 是取主色色相、极低饱和度推算的`); }
   meta.inputs.primary = primaryHex; meta.inputs.accent = accentHex; meta.inputs.neutral = neutralHex;
 

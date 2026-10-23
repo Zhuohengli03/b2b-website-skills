@@ -25,7 +25,7 @@ ISO 898-1 property class 10.9 bolts,采购术语与长尾,US/DE/PL-EN,估计：�
 hex socket cap screw M3-M24,采购术语与长尾,US/DE/PL-EN,估计：低,Würth 页 H1 用 ≤ M24 / ≥ M24 分段,交易-规格,分类页规格范围句
 salt spray 720 hours zinc flake bolts,采购术语与长尾,US/DE/PL-EN,估计：低,需求单 F7 盐雾 ≥720h；采购参数词,交易-规格,型号页参数表 / Quality 页
 flange bolt with serrated underhead,采购术语与长尾,US/DE/PL-EN,估计：低,fasten.it 目录用「with or without knurled underhead」,交易-规格,DIN 6921 分类页描述
-self tapping screw DIN 7981 DIN 7982,采购术语与长尾,US/DE/PL-EN,估计：低,标准号词；客户自攻螺钉具体标准待确认,交易-已定标准,自攻螺钉分类页（标准号待客户确认）
+self tapping screw DIN 7981 DIN 7982,采购术语与长尾,US/DE/PL-EN,估计：低,标准号词；你的自攻螺钉具体标准待确认,交易-已定标准,自攻螺钉分类页（标准号待你确认）
 SCM435 cold forged bolt,采购术语与长尾,US/DE/PL-EN,估计：低,材料牌号；需求单 F8 非标件材料,交易-规格,非标定制页材料表
 10.9 automotive bolts IATF 16949 supplier,采购术语与长尾,US/DE/PL-EN,估计：低,认证 + 品类组合；国内目录页高频用 IATF 16949,商业-合规筛选,汽车高强度螺栓分类页 / Quality 页
 EN 10204 3.1 certificate fasteners,采购术语与长尾,DE/PL-EN,估计：低,欧盟材质证明惯例；Würth 产品页设 Certificates/Documents 栏,交易-合规文件,Quality & Downloads 页 / 型号页下载区
@@ -35,7 +35,7 @@ REACH RoHS compliant fasteners,采购术语与长尾,DE/PL-EN,估计：低,需�
 Zylinderschrauben mit Innensechskant DIN 912 8.8,采购术语与长尾,DE,估计：中,Bossard ch-de 产品页标题原文；搜索结果多家德国分销页用此词,交易-已定标准,FAQ（德语词承接）；下一期德语型号页
 Sechskantschrauben mit Flansch DIN 6921,采购术语与长尾,DE,估计：低,德语标准名,交易-已定标准,下一期德语分类页
 śruba imbusowa DIN 912 M8,采购术语与长尾,PL,估计：中低,RS Polska 产品页标题模式「Śruba imbusowa M8 …」,交易-规格,下一期波兰语型号页
-śruby do maszyn rolniczych producent,采购术语与长尾,PL,估计：低,客户有波兰农机厂客户（F14）；Marcopol 按行业分类有 motoryzacyjna,商业-行业,FAQ / 案例段（波兰农机）
+śruby do maszyn rolniczych producent,采购术语与长尾,PL,估计：低,公司有波兰农机厂买家（F14）；Marcopol 按行业分类有 motoryzacyjna,商业-行业,FAQ / 案例段（波兰农机）
 how to choose socket head cap screw grade,问题型,US/DE/PL-EN,估计：中低,Xinchi 博客有同题文章（竞品已在做）,信息-选型,FAQ / 博客
 12.9 vs 10.9 bolts difference,问题型,US/DE/PL-EN,估计：中,等级对比为常见问题,信息-选型,FAQ
 ISO 4762 vs DIN 912 difference,问题型,US/DE/PL-EN,估计：中低,Würth 页专门注释两者差异与细牙移 ISO 12474,信息-标准,FAQ / 分类页说明段
@@ -44,6 +44,6 @@ zinc flake vs hot dip galvanized bolts,问题型,US/DE/PL-EN,估计：低,表面
 fastener MOQ China factory,问题型,US/DE/PL-EN,估计：低,采购惯例问题；需求单 F10,信息-交易条件,FAQ（MOQ 5万件/规格）
 cold forged bolt lead time,问题型,US/DE/PL-EN,估计：低,交期问题；需求单 F10,信息-交易条件,FAQ（20–25 天 / 非标 35–40 天）
 cold heading vs machining fasteners,问题型,US/DE/PL-EN,估计：低,工艺对比；非标页卖点,信息-工艺,非标定制页问答
-what is a 3.1 material certificate,问题型,DE/PL-EN,估计：低,德国客户硬要求材质报告（需求表 47）,信息-合规文件,FAQ / Quality 页
+what is a 3.1 material certificate,问题型,DE/PL-EN,估计：低,德国买家硬要求材质报告（需求表 42）,信息-合规文件,FAQ / Quality 页
 how to request a sample from a fastener factory,问题型,US/DE/PL-EN,估计：低,15 天出样流程（F9）,信息-流程,非标定制页 CTA 段
 fastener price per 1000 pcs China,问题型,US/DE/PL-EN,估计：中低,价格类问题；不公开价，用 FAQ 引导询盘,信息-价格,FAQ（引导至询盘，不报价）

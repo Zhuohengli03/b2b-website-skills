@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
-# 把本仓库的 11 个 skill 装进 OpenClaw / Claude Code / Codex 的 skills 目录。
+# 把本仓库的 11 个 skill 装进你自己的 OpenClaw / Claude Code / Codex 的 skills 目录，
+# 让你的工厂 / 外贸公司自己把询盘站做出来。
 # 用法：bash install.sh openclaw | claude | codex | all
 set -euo pipefail
 HERE="$(cd "$(dirname "$0")" && pwd)"

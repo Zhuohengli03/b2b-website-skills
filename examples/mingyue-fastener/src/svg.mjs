@@ -108,7 +108,7 @@ export const stepFrames = [
   `<svg class="frame" viewBox="0 0 120 40" aria-hidden="true" focusable="false" stroke-width="1.5" stroke-linejoin="round"><g fill="currentColor" stroke="currentColor"><rect x="8" y="8" width="18" height="24"/><path d="M26 14h70l2 2v8l-2 2H26z"/></g><g stroke="var(--color-surface)" fill="none">${FRAME_THREADS}</g><g stroke="var(--color-accent)" fill="none" stroke-width="1"><path d="M3 8v24M1 8h7M1 32h7M26 37h70M26 34v5M96 34v5"/><path d="M104 22l4 4 8-9" stroke-width="2" stroke-linecap="round"/></g></svg>`,
 ];
 
-// ---------- 带垫异形螺栓示意（重绘，不是客户图纸） ----------
+// ---------- 带垫异形螺栓示意（重绘，不是买家图纸） ----------
 export const customBolt = (id, title, desc) => `<svg viewBox="0 0 360 180" role="img" aria-labelledby="${id}">
   <title id="${id}">${title}</title>
   <desc>${desc}</desc>

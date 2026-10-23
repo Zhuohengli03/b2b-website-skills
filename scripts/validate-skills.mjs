@@ -40,8 +40,8 @@ const section = (md, title) => {                                  // 取「## ti
   const m = md.match(new RegExp(`^## [^\\n]*${title}[^\\n]*\\n([\\s\\S]*?)(?=^## |(?![\\s\\S]))`, 'mu'));
   return m ? m[1] : null;
 };
-// 实例名归一到契约里的模板名：第1批-2026-09-10.md → 第N批-YYYY-MM-DD.md；月报-2026-09.md → 月报-YYYY-MM.md
-const canon = f => f.replace(/第\d+批-\d{4}-\d{2}-\d{2}\.md$/u, '第N批-YYYY-MM-DD.md').replace(/月报-\d{4}-\d{2}\.md$/u, '月报-YYYY-MM.md');
+// 实例名归一到契约里的模板名：月报-2026-09.md → 月报-YYYY-MM.md
+const canon = f => f.replace(/月报-\d{4}-\d{2}\.md$/u, '月报-YYYY-MM.md');
 const filesIn = text => [...new Set([...text.matchAll(FILE_RE)].map(m => canon(m[0].replace(/^\.?\//, ''))).filter(f => !f.endsWith('SKILL.md')))];
 const parseFrontmatter = md => {
   const m = md.match(/^---\r?\n([\s\S]*?)\r?\n---/);
