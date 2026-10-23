@@ -105,6 +105,7 @@ Also: `templates/建站需求表.md` (the brief you fill in yourself) and `examp
 
 ## Changelog
 
+- **0.2.0** — rewritten for companies building their own site; image quotas, output length caps, sub-agents load only the references their step needs; the four largest skills slimmed to ≤ 20 KB bodies with detail moved to `references/`.
 - **0.1.0** — first public release, built for factories and trading companies to use on their own site. Eleven skills, four scripts, one full example. Techniques borrowed from marketingskills, claude-seo, geo-seo-claude, frontend-design, ux-ui-agent-skills, oil-ui, apple-design-skill, website-rebuild-skill, scroll-craft and squirrelscan are credited inline.
 
 ## Credits and licence

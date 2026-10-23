@@ -109,6 +109,7 @@ Claude Code 当插件装：
 
 ## 版本
 
+- **0.2.0**：面向公司自用的改写；看图配额、产出篇幅上限、子 agent 只带本步所需的 reference；四个大 skill 正文瘦身到 ≤ 20 KB，细则下沉到 `references/`。
 - **0.1.0**：首个公开版，面向工厂 / 外贸公司自用。11 个 skill、4 个脚本、1 个完整示例。参考了 marketingskills、claude-seo、geo-seo-claude、frontend-design、ux-ui-agent-skills、oil-ui、apple-design-skill、website-rebuild-skill、scroll-craft、squirrelscan 等仓库的做法，出处在各条规则末尾标注。
 
 ## 致谢与许可
