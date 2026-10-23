@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mingyue Fastener Co., Ltd. | Precision Cold-Forged Fasteners Manufacturer Since 2009</title>
+<meta name="description" content="Mingyue Fastener is an ISO 9001 & IATF 16949 certified manufacturer of DIN 912 socket head cap screws, DIN 6921 flange bolts, self-tapping screws, 10.9 automotive bolts and custom cold-forged parts. 180 million pcs/year, exported to 23 countries.">
+<style>
+  :root {
+    --navy: #0B2A4A;
+    --navy-dark: #071D34;
+    --blue: #1F5A8E;
+    --accent: #E8A317;
+    --steel: #5B6B7C;
+    --light: #F4F6F9;
+    --border: #E1E6EC;
+    --text: #1F2933;
+    --muted: #6B7A8C;
+    --white: #ffffff;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: var(--text);
+    line-height: 1.6;
+    background: var(--white);
+  }
+  a { color: inherit; text-decoration: none; }
+  img { max-width: 100%; display: block; }
+  .container { width: min(1200px, 92%); margin: 0 auto; }
+  h1, h2, h3, h4 { line-height: 1.2; color: var(--navy); }
+  h2 { font-size: 2.1rem; margin-bottom: 0.6rem; }
+  .section { padding: 90px 0; }
+  .section-head { text-align: center; max-width: 720px; margin: 0 auto 50px; }
+  .section-head .eyebrow {
+    display: inline-block; font-size: 0.78rem; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--accent); font-weight: 700; margin-bottom: 10px;
+  }
+  .section-head p { color: var(--muted); font-size: 1.05rem; }
+
+  /* Buttons */
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 14px 28px; border-radius: 4px; font-weight: 600; font-size: 0.95rem;
+    transition: all .2s ease; cursor: pointer; border: 2px solid transparent;
+  }
+  .btn-primary { background: var(--accent); color: var(--navy-dark); border-color: var(--accent); }
+  .btn-primary:hover { background: #d19311; border-color: #d19311; }
+  .btn-outline { border-color: rgba(255,255,255,.6); color: #fff; }
+  .btn-outline:hover { background: rgba(255,255,255,.12); border-color: #fff; }
+  .btn-navy { background: var(--navy); color: #fff; border-color: var(--navy); }
+  .btn-navy:hover { background: var(--blue); border-color: var(--blue); }
+
+  /* Top bar */
+  .topbar { background: var(--navy-dark); color: rgba(255,255,255,.75); font-size: 0.82rem; }
+  .topbar .container { display: flex; justify-content: space-between; align-items: center; height: 36px; }
+  .topbar span { display: inline-flex; align-items: center; gap: 6px; margin-right: 22px; }
+  .topbar svg { width: 14px; height: 14px; fill: var(--accent); }
+
+  /* Header */
+  header {
+    background: var(--white); position: sticky; top: 0; z-index: 100;
+    box-shadow: 0 2px 12px rgba(0,0,0,.06);
+  }
+  .nav { display: flex; align-items: center; justify-content: space-between; height: 80px; }
+  .logo { display: flex; align-items: center; gap: 12px; }
+  .logo-mark {
+    width: 46px; height: 46px; background: var(--navy); border-radius: 6px;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .logo-mark svg { width: 28px; height: 28px; }
+  .logo-text strong { display: block; font-size: 1.25rem; color: var(--navy); letter-spacing: 0.02em; line-height: 1.1; }
+  .logo-text small { font-size: 0.62rem; letter-spacing: 0.16em; color: var(--muted); text-transform: uppercase; }
+  .menu { display: flex; gap: 32px; list-style: none; }
+  .menu a { font-weight: 500; font-size: 0.95rem; color: var(--text); position: relative; padding: 6px 0; }
+  .menu a::after {
+    content: ""; position: absolute; left: 0; bottom: 0; width: 0; height: 2px;
+    background: var(--accent); transition: width .2s;
+  }
+  .menu a:hover::after { width: 100%; }
+  .nav .btn { padding: 11px 22px; }
+  .burger { display: none; background: none; border: 0; cursor: pointer; }
+  .burger span { display: block; width: 26px; height: 3px; background: var(--navy); margin: 5px 0; border-radius: 2px; }
+
+  /* Hero */
+  .hero {
+    position: relative; color: #fff; overflow: hidden;
+    background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 55%, var(--blue) 100%);
+  }
+  .hero::before {
+    content: ""; position: absolute; inset: 0;
+    background-image:
+      linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+  .hero .container {
+    position: relative; display: grid; grid-template-columns: 1.15fr 1fr; gap: 60px; align-items: center;
+    min-height: 620px; padding: 70px 0;
+  }
+  .hero .eyebrow {
+    display: inline-flex; align-items: center; gap: 10px; font-size: 0.8rem; letter-spacing: 0.16em;
+    text-transform: uppercase; color: var(--accent); font-weight: 700; margin-bottom: 22px;
+  }
+  .hero .eyebrow::before { content: ""; width: 36px; height: 2px; background: var(--accent); }
+  .hero h1 { color: #fff; font-size: 3.1rem; font-weight: 800; margin-bottom: 20px; letter-spacing: -0.01em; }
+  .hero h1 span { color: var(--accent); }
+  .hero p.lead { font-size: 1.15rem; color: rgba(255,255,255,.82); max-width: 560px; margin-bottom: 34px; }
+  .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 40px; }
+  .hero-badges { display: flex; gap: 28px; flex-wrap: wrap; }
+  .hero-badges div { display: flex; align-items: center; gap: 10px; font-size: 0.9rem; color: rgba(255,255,255,.85); }
+  .hero-badges svg { width: 22px; height: 22px; }
+  .hero-visual { position: relative; display: flex; justify-content: center; }
+  .hero-visual svg { width: 100%; max-width: 480px; filter: drop-shadow(0 30px 40px rgba(0,0,0,.4)); }
+  .hero-card {
+    position: absolute; bottom: 10px; right: 0; background: #fff; color: var(--text);
+    border-radius: 8px; padding: 16px 20px; box-shadow: 0 14px 40px rgba(0,0,0,.3);
+    font-size: 0.85rem; min-width: 230px; border-left: 4px solid var(--accent);
+  }
+  .hero-card strong { display: block; color: var(--navy); font-size: 0.95rem; margin-bottom: 4px; }
+  .hero-card em { font-style: normal; color: var(--muted); }
+
+  /* Stats */
+  .stats { background: var(--white); border-bottom: 1px solid var(--border); }
+  .stats .container { display: grid; grid-template-columns: repeat(5, 1fr); }
+  .stat { text-align: center; padding: 36px 16px; border-right: 1px solid var(--border); }
+  .stat:last-child { border-right: 0; }
+  .stat strong { display: block; font-size: 2.3rem; font-weight: 800; color: var(--navy); line-height: 1; margin-bottom: 8px; }
+  .stat strong small { font-size: 1.2rem; color: var(--accent); }
+  .stat span { font-size: 0.85rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; }
+
+  /* Products */
+  .products { background: var(--light); }
+  .product-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+  .product-card {
+    background: #fff; border-radius: 8px; overflow: hidden; border: 1px solid var(--border);
+    transition: transform .25s, box-shadow .25s; display: flex; flex-direction: column;
+  }
+  .product-card:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(11,42,74,.12); }
+  .product-img {
+    background: linear-gradient(160deg, #E9EEF4, #D5DDE6); height: 210px;
+    display: flex; align-items: center; justify-content: center; position: relative;
+  }
+  .product-img svg { width: 150px; height: 150px; }
+  .product-img .tag {
+    position: absolute; top: 14px; left: 14px; background: var(--navy); color: #fff;
+    font-size: 0.7rem; letter-spacing: 0.1em; padding: 5px 10px; border-radius: 3px; text-transform: uppercase;
+  }
+  .product-body { padding: 24px; flex: 1; display: flex; flex-direction: column; }
+  .product-body h3 { font-size: 1.2rem; margin-bottom: 8px; }
+  .product-body p { color: var(--muted); font-size: 0.93rem; margin-bottom: 16px; }
+  .spec-list { list-style: none; font-size: 0.86rem; margin-bottom: 20px; }
+  .spec-list li { display: flex; justify-content: space-between; padding: 6px 0; border-bottom: 1px dashed var(--border); }
+  .spec-list li span:first-child { color: var(--muted); }
+  .spec-list li span:last-child { font-weight: 600; color: var(--navy); }
+  .product-body .link { margin-top: auto; color: var(--blue); font-weight: 600; font-size: 0.92rem; }
+  .product-body .link:hover { color: var(--accent); }
+
+  /* OEM */
+  .oem { background: var(--navy); color: #fff; position: relative; overflow: hidden; }
+  .oem::after {
+    content: ""; position: absolute; right: -120px; top: -120px; width: 480px; height: 480px;
+    border-radius: 50%; border: 60px solid rgba(255,255,255,.04);
+  }
+  .oem .container { display: grid; grid-template-columns: 1fr 1fr; gap: 70px; align-items: center; position: relative; }
+  .oem h2 { color: #fff; }
+  .oem .eyebrow { color: var(--accent); font-size: 0.78rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 700; display: block; margin-bottom: 10px; }
+  .oem p { color: rgba(255,255,255,.8); margin-bottom: 20px; }
+  .oem ul.checks { list-style: none; margin: 24px 0 32px; }
+  .oem ul.checks li { display: flex; gap: 12px; align-items: flex-start; margin-bottom: 12px; color: rgba(255,255,255,.9); }
+  .oem ul.checks svg { width: 20px; height: 20px; flex-shrink: 0; margin-top: 3px; }
+  .steps { display: grid; gap: 16px; }
+  .step {
+    background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.12); border-radius: 8px;
+    padding: 20px 22px; display: flex; gap: 18px; align-items: flex-start; transition: background .2s;
+  }
+  .step:hover { background: rgba(255,255,255,.1); }
+  .step .num {
+    width: 42px; height: 42px; border-radius: 50%; background: var(--accent); color: var(--navy-dark);
+    font-weight: 800; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 1.05rem;
+  }
+  .step h4 { color: #fff; font-size: 1.02rem; margin-bottom: 4px; }
+  .step p { font-size: 0.88rem; margin: 0; color: rgba(255,255,255,.7); }
+
+  /* Why us */
+  .why-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 26px; }
+  .why-card { padding: 32px 26px; border: 1px solid var(--border); border-radius: 8px; background: #fff; transition: border-color .2s, box-shadow .2s; }
+  .why-card:hover { border-color: var(--accent); box-shadow: 0 10px 30px rgba(11,42,74,.08); }
+  .why-icon { width: 56px; height: 56px; border-radius: 10px; background: var(--light); display: flex; align-items: center; justify-content: center; margin-bottom: 18px; }
+  .why-icon svg { width: 30px; height: 30px; }
+  .why-card h3 { font-size: 1.1rem; margin-bottom: 8px; }
+  .why-card p { color: var(--muted); font-size: 0.92rem; }
+
+  /* Equipment strip */
+  .equipment { background: var(--light); }
+  .equip-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 18px; }
+  .equip { background: #fff; border-radius: 8px; padding: 22px 14px; text-align: center; border: 1px solid var(--border); }
+  .equip strong { display: block; font-size: 1.8rem; color: var(--navy); font-weight: 800; }
+  .equip span { font-size: 0.8rem; color: var(--muted); line-height: 1.3; display: block; }
+
+  /* Certifications */
+  .cert-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+  .cert {
+    border: 1px solid var(--border); border-radius: 8px; padding: 30px; text-align: center; background: #fff;
+    position: relative;
+  }
+  .cert svg { width: 80px; height: 80px; margin: 0 auto 16px; }
+  .cert h3 { font-size: 1.15rem; margin-bottom: 6px; }
+  .cert p { color: var(--muted); font-size: 0.9rem; margin-bottom: 16px; }
+  .cert .dl {
+    display: inline-flex; align-items: center; gap: 6px; font-size: 0.85rem; font-weight: 600;
+    color: var(--blue); border: 1px solid var(--blue); padding: 8px 14px; border-radius: 4px; transition: all .2s;
+  }
+  .cert .dl:hover { background: var(--blue); color: #fff; }
+  .cert .dl svg { width: 14px; height: 14px; margin: 0; }
+  .cert-note { text-align: center; color: var(--muted); font-size: 0.9rem; margin-top: 28px; }
+
+  /* Markets */
+  .markets { background: var(--navy-dark); color: #fff; }
+  .markets .container { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+  .markets h2 { color: #fff; }
+  .markets p { color: rgba(255,255,255,.78); margin-bottom: 18px; }
+  .flags { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+  .flags span { background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.15); padding: 7px 14px; border-radius: 30px; font-size: 0.85rem; }
+  .flags span.key { background: var(--accent); color: var(--navy-dark); border-color: var(--accent); font-weight: 700; }
+  .testimonials { display: grid; gap: 18px; }
+  .quote { background: rgba(255,255,255,.06); border-left: 3px solid var(--accent); padding: 22px 24px; border-radius: 0 8px 8px 0; }
+  .quote p { font-style: italic; color: rgba(255,255,255,.88); margin-bottom: 10px; font-size: 0.97rem; }
+  .quote strong { font-size: 0.85rem; color: var(--accent); }
+  .quote small { display: block; font-size: 0.78rem; color: rgba(255,255,255,.55); }
+
+  /* Terms */
+  .terms-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+  .term { background: var(--light); border-radius: 8px; padding: 26px; }
+  .term h4 { font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
+  .term strong { display: block; font-size: 1.15rem; color: var(--navy); margin-bottom: 4px; }
+  .term span { font-size: 0.88rem; color: var(--muted); }
+
+  /* Contact */
+  .contact { background: linear-gradient(135deg, var(--navy) 0%, var(--blue) 100%); color: #fff; }
+  .contact .container { display: grid; grid-template-columns: 1fr 1.1fr; gap: 60px; align-items: start; }
+  .contact h2 { color: #fff; }
+  .contact p { color: rgba(255,255,255,.82); margin-bottom: 26px; }
+  .contact-info { list-style: none; }
+  .contact-info li { display: flex; gap: 14px; margin-bottom: 18px; align-items: flex-start; }
+  .contact-info svg { width: 22px; height: 22px; flex-shrink: 0; margin-top: 2px; }
+  .contact-info strong { display: block; font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); margin-bottom: 2px; }
+  .contact-info span { color: rgba(255,255,255,.9); font-size: 0.95rem; }
+  .form { background: #fff; border-radius: 10px; padding: 36px; color: var(--text); box-shadow: 0 20px 60px rgba(0,0,0,.25); }
+  .form h3 { font-size: 1.35rem; margin-bottom: 6px; }
+  .form > p { color: var(--muted); font-size: 0.9rem; margin-bottom: 22px; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .field { margin-bottom: 16px; }
+  .field label { display: block; font-size: 0.82rem; font-weight: 600; color: var(--navy); margin-bottom: 6px; }
+  .field input, .field select, .field textarea {
+    width: 100%; padding: 12px 14px; border: 1px solid var(--border); border-radius: 4px;
+    font: inherit; font-size: 0.93rem; color: var(--text); background: #fff; transition: border-color .2s;
+  }
+  .field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--blue); box-shadow: 0 0 0 3px rgba(31,90,142,.12); }
+  .field textarea { min-height: 110px; resize: vertical; }
+  .form .btn { width: 100%; justify-content: center; }
+  .form small { display: block; text-align: center; color: var(--muted); font-size: 0.78rem; margin-top: 12px; }
+  .form-success { display: none; text-align: center; padding: 40px 10px; }
+  .form-success svg { width: 64px; height: 64px; margin: 0 auto 16px; }
+
+  /* Footer */
+  footer { background: var(--navy-dark); color: rgba(255,255,255,.7); font-size: 0.9rem; }
+  .footer-grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1.2fr; gap: 40px; padding: 60px 0 40px; }
+  footer h4 { color: #fff; font-size: 0.95rem; margin-bottom: 16px; letter-spacing: 0.04em; }
+  footer ul { list-style: none; }
+  footer li { margin-bottom: 9px; }
+  footer a:hover { color: var(--accent); }
+  .footer-brand .logo-text strong { color: #fff; }
+  .footer-brand .logo-text small { color: rgba(255,255,255,.5); }
+  .footer-brand p { margin: 16px 0; max-width: 360px; }
+  .footer-bottom { border-top: 1px solid rgba(255,255,255,.1); padding: 20px 0; display: flex; justify-content: space-between; font-size: 0.8rem; flex-wrap: wrap; gap: 10px; }
+
+  /* Back to top */
+  #toTop {
+    position: fixed; right: 24px; bottom: 24px; width: 46px; height: 46px; border-radius: 50%;
+    background: var(--accent); border: 0; cursor: pointer; display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,.25); opacity: 0; pointer-events: none; transition: opacity .3s; z-index: 90;
+  }
+  #toTop.show { opacity: 1; pointer-events: auto; }
+  #toTop svg { width: 20px; height: 20px; }
+
+  /* Reveal animation */
+  .reveal { opacity: 0; transform: translateY(24px); transition: opacity .6s ease, transform .6s ease; }
+  .reveal.in { opacity: 1; transform: none; }
+
+  /* Responsive */
+  @media (max-width: 1024px) {
+    .hero .container, .oem .container, .markets .container, .contact .container { grid-template-columns: 1fr; }
+    .hero h1 { font-size: 2.5rem; }
+    .hero-visual { display: none; }
+    .stats .container { grid-template-columns: repeat(3, 1fr); }
+    .stat:nth-child(3) { border-right: 0; }
+    .product-grid, .cert-grid { grid-template-columns: repeat(2, 1fr); }
+    .why-grid, .terms-grid { grid-template-columns: repeat(2, 1fr); }
+    .equip-grid { grid-template-columns: repeat(3, 1fr); }
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 720px) {
+    .topbar { display: none; }
+    .menu, .nav .btn { display: none; }
+    .burger { display: block; }
+    .menu.open { display: flex; flex-direction: column; position: absolute; top: 80px; left: 0; right: 0; background: #fff; padding: 20px 4%; gap: 16px; box-shadow: 0 10px 20px rgba(0,0,0,.08); }
+    .hero h1 { font-size: 2rem; }
+    .section { padding: 60px 0; }
+    h2 { font-size: 1.6rem; }
+    .stats .container { grid-template-columns: repeat(2, 1fr); }
+    .stat { border-right: 0; border-bottom: 1px solid var(--border); }
+    .product-grid, .cert-grid, .why-grid, .terms-grid, .form-row, .footer-grid { grid-template-columns: 1fr; }
+    .equip-grid { grid-template-columns: repeat(2, 1fr); }
+    .form { padding: 24px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Top bar -->
+<div class="topbar">
+  <div class="container">
+    <div>
+      <span><svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 4l-8 5-8-5V6l8 5 8-5z"/></svg>sales@mingyue-fastener.com</span>
+      <span><svg viewBox="0 0 24 24"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z"/></svg>Wenling, Taizhou, Zhejiang, China</span>
+    </div>
+    <div>
+      <span><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm0 18a8 8 0 118-8 8 8 0 01-8 8zm.5-13H11v6l5.2 3.1.8-1.2-4.5-2.7z"/></svg>Mon–Sat 8:00–17:30 (GMT+8)</span>
+      <span>ISO 9001:2015 · IATF 16949</span>
+    </div>
+  </div>
+</div>
+
+<!-- Header -->
+<header>
+  <div class="container nav">
+    <a href="#" class="logo">
+      <div class="logo-mark">
+        <svg viewBox="0 0 32 32" fill="none"><path d="M16 3l11 6.5v13L16 29 5 22.5v-13L16 3z" stroke="#E8A317" stroke-width="2.2"/><circle cx="16" cy="16" r="4.5" fill="#E8A317"/></svg>
+      </div>
+      <div class="logo-text">
+        <strong>MINGYUE FASTENER</strong>
+        <small>Precision Since 2009</small>
+      </div>
+    </a>
+    <ul class="menu" id="menu">
+      <li><a href="#products">Products</a></li>
+      <li><a href="#oem">Custom / OEM</a></li>
+      <li><a href="#why">Why Mingyue</a></li>
+      <li><a href="#certs">Certificates</a></li>
+      <li><a href="#markets">Markets</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="#contact" class="btn btn-primary">Request a Quote</a>
+    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="container">
+    <div>
+      <div class="eyebrow">Cold-Forged Fastener Manufacturer · China</div>
+      <h1>Precision Fasteners for <span>Automotive</span> &amp; Industrial Supply Chains</h1>
+      <p class="lead">Mingyue Fastener produces DIN 912 socket head cap screws, DIN 6921 flange bolts and custom cold-forged parts to grade 10.9 / 12.9 — 180 million pieces per year, 100% optically inspected, exported to 23 countries.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-primary">Get a Quotation
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a href="#products" class="btn btn-outline">View Products</a>
+      </div>
+      <div class="hero-badges">
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="#E8A317" stroke-width="2"><path d="M12 2l7 3v6c0 5-3.5 9-7 11-3.5-2-7-6-7-11V5l7-3z"/><path d="M9 12l2 2 4-4"/></svg>ISO 9001:2015</div>
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="#E8A317" stroke-width="2"><path d="M12 2l7 3v6c0 5-3.5 9-7 11-3.5-2-7-6-7-11V5l7-3z"/><path d="M9 12l2 2 4-4"/></svg>IATF 16949</div>
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="#E8A317" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18M8 15h4"/></svg>SGS RoHS Reports</div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <!-- Socket head cap screw illustration -->
+      <svg viewBox="0 0 480 480" fill="none">
+        <defs>
+          <linearGradient id="steel" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stop-color="#5A6675"/><stop offset=".35" stop-color="#C9D1DA"/><stop offset=".5" stop-color="#F2F5F8"/><stop offset=".65" stop-color="#B7C0CA"/><stop offset="1" stop-color="#4F5A68"/>
+          </linearGradient>
+          <linearGradient id="head" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stop-color="#2E3742"/><stop offset=".4" stop-color="#737F8D"/><stop offset=".55" stop-color="#9AA5B2"/><stop offset="1" stop-color="#2A323C"/>
+          </linearGradient>
+          <linearGradient id="glow" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#E8A317" stop-opacity=".35"/><stop offset="1" stop-color="#E8A317" stop-opacity="0"/>
+          </linearGradient>
+        </defs>
+        <circle cx="240" cy="240" r="210" fill="url(#glow)"/>
+        <circle cx="240" cy="240" r="190" stroke="rgba(255,255,255,.12)" stroke-width="1.5" stroke-dasharray="6 8"/>
+        <g transform="rotate(-35 240 240)">
+          <!-- shank with thread -->
+          <rect x="205" y="150" width="70" height="300" rx="6" fill="url(#steel)"/>
+          <g stroke="#2F3944" stroke-width="3" opacity=".55">
+            <path d="M205 190 l70 -6 M205 206 l70 -6 M205 222 l70 -6 M205 238 l70 -6 M205 254 l70 -6 M205 270 l70 -6 M205 286 l70 -6 M205 302 l70 -6 M205 318 l70 -6 M205 334 l70 -6 M205 350 l70 -6 M205 366 l70 -6 M205 382 l70 -6 M205 398 l70 -6 M205 414 l70 -6 M205 430 l70 -6"/>
+          </g>
+          <path d="M205 450 l10 14 h50 l10 -14z" fill="#3B4653"/>
+          <!-- head -->
+          <rect x="180" y="40" width="120" height="118" rx="10" fill="url(#head)"/>
+          <ellipse cx="240" cy="40" rx="60" ry="14" fill="#8C97A4"/>
+          <!-- hex socket -->
+          <path d="M240 18 l20 11 v22 l-20 11 l-20 -11 v-22z" fill="#161B21"/>
+          <path d="M240 24 l14 8 v16 l-14 8 l-14 -8 v-16z" fill="#0D1116"/>
+        </g>
+        <text x="240" y="456" text-anchor="middle" fill="rgba(255,255,255,.45)" font-size="13" letter-spacing="3" font-family="Arial, sans-serif">DIN 912 · ISO 4762 · 12.9</text>
+      </svg>
+      <div class="hero-card">
+        <strong>DIN 912 M6×20 · Grade 12.9</strong>
+        <em>Black oxide · Tolerance 6g · Tensile ≥ 1220 MPa</em>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Stats -->
+<section class="stats">
+  <div class="container">
+    <div class="stat"><strong>180<small>M</small></strong><span>Pieces / Year</span></div>
+    <div class="stat"><strong>14</strong><span>Cold Heading Machines</span></div>
+    <div class="stat"><strong>6,500<small>m²</small></strong><span>Production Facility</span></div>
+    <div class="stat"><strong>23</strong><span>Export Countries</span></div>
+    <div class="stat"><strong>100<small>%</small></strong><span>Inspection on Automotive Parts</span></div>
+  </div>
+</section>
+
+<!-- Products -->
+<section class="section products" id="products">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Product Range</span>
+      <h2>Standard &amp; Custom Fasteners</h2>
+      <p>Hundreds of standard models and over a thousand specifications, cold-forged in-house to DIN / ISO standards with in-house heat treatment and surface finishing options.</p>
+    </div>
+    <div class="product-grid">
+
+      <div class="product-card reveal">
+        <div class="product-img">
+          <span class="tag">DIN 912 / ISO 4762</span>
+          <svg viewBox="0 0 150 150" fill="none">
+            <rect x="52" y="18" width="46" height="40" rx="6" fill="#3B4653"/>
+            <path d="M75 26l10 6v12l-10 6-10-6V32z" fill="#161B21"/>
+            <rect x="62" y="58" width="26" height="78" rx="3" fill="#8C97A4"/>
+            <g stroke="#3B4653" stroke-width="2" opacity=".6"><path d="M62 68h26M62 76h26M62 84h26M62 92h26M62 100h26M62 108h26M62 116h26M62 124h26"/></g>
+            <path d="M62 136l6 8h14l6-8z" fill="#3B4653"/>
+          </svg>
+        </div>
+        <div class="product-body">
+          <h3>Socket Head Cap Screws</h3>
+          <p>Hexagon socket head cap screws for machinery, tooling and automotive assemblies.</p>
+          <ul class="spec-list">
+            <li><span>Grade</span><span>8.8 / 10.9 / 12.9</span></li>
+            <li><span>Size range</span><span>M3 – M20</span></li>
+            <li><span>Finish</span><span>Black oxide, Zinc, Dacromet</span></li>
+            <li><span>Typical</span><span>M6×20 12.9 BO, ≥1220 MPa</span></li>
+          </ul>
+          <a href="#contact" class="link">View specifications →</a>
+        </div>
+      </div>
+
+      <div class="product-card reveal">
+        <div class="product-img">
+          <span class="tag">DIN 6921</span>
+          <svg viewBox="0 0 150 150" fill="none">
+            <path d="M75 14l24 14v28L75 70 51 56V28z" fill="#3B4653"/>
+            <ellipse cx="75" cy="68" rx="40" ry="10" fill="#5B6B7C"/>
+            <rect x="62" y="70" width="26" height="66" rx="3" fill="#8C97A4"/>
+            <g stroke="#3B4653" stroke-width="2" opacity=".6"><path d="M62 82h26M62 90h26M62 98h26M62 106h26M62 114h26M62 122h26"/></g>
+            <path d="M62 136l6 8h14l6-8z" fill="#3B4653"/>
+          </svg>
+        </div>
+        <div class="product-body">
+          <h3>Hex Flange Bolts</h3>
+          <p>Serrated and plain flange bolts with excellent clamp load — widely used in automotive and agricultural machinery.</p>
+          <ul class="spec-list">
+            <li><span>Grade</span><span>8.8 / 10.9</span></li>
+            <li><span>Size range</span><span>M5 – M16</span></li>
+            <li><span>Finish</span><span>Dacromet, Zinc-Nickel</span></li>
+            <li><span>Typical</span><span>M8×25 10.9, salt spray ≥720 h</span></li>
+          </ul>
+          <a href="#contact" class="link">View specifications →</a>
+        </div>
+      </div>
+
+      <div class="product-card reveal">
+        <div class="product-img">
+          <span class="tag">Automotive</span>
+          <svg viewBox="0 0 150 150" fill="none">
+            <path d="M75 12l26 15v30L75 72 49 57V27z" fill="#2E3742"/>
+            <text x="75" y="48" text-anchor="middle" fill="#E8A317" font-size="14" font-weight="bold" font-family="Arial">10.9</text>
+            <rect x="60" y="72" width="30" height="64" rx="3" fill="#7A8794"/>
+            <g stroke="#2E3742" stroke-width="2" opacity=".6"><path d="M60 84h30M60 92h30M60 100h30M60 108h30M60 116h30M60 124h30"/></g>
+            <path d="M60 136l7 8h16l7-8z" fill="#2E3742"/>
+          </svg>
+        </div>
+        <div class="product-body">
+          <h3>High-Strength Automotive Bolts</h3>
+          <p>Grade 10.9 bolts for Tier-2 automotive supply, produced under IATF 16949 with 100% optical sorting.</p>
+          <ul class="spec-list">
+            <li><span>Grade</span><span>10.9 (12.9 on request)</span></li>
+            <li><span>Material</span><span>SCM435 / 10B21 / 35CrMo</span></li>
+            <li><span>Inspection</span><span>100% optical sorting</span></li>
+            <li><span>Traceability</span><span>Material report per lot</span></li>
+          </ul>
+          <a href="#contact" class="link">View specifications →</a>
+        </div>
+      </div>
+
+      <div class="product-card reveal">
+        <div class="product-img">
+          <span class="tag">Self-Tapping</span>
+          <svg viewBox="0 0 150 150" fill="none">
+            <ellipse cx="75" cy="30" rx="30" ry="14" fill="#3B4653"/>
+            <path d="M65 30h20M75 22v16" stroke="#161B21" stroke-width="4"/>
+            <path d="M63 40h24l-12 100z" fill="#8C97A4"/>
+            <g stroke="#3B4653" stroke-width="2" opacity=".6"><path d="M64 52h22M65 64h20M66 76h18M67 88h16M68 100h14M69 112h12M70 124h10"/></g>
+          </svg>
+        </div>
+        <div class="product-body">
+          <h3>Self-Tapping Screws</h3>
+          <p>Thread-forming and thread-cutting screws for sheet metal, plastics and light assembly.</p>
+          <ul class="spec-list">
+            <li><span>Standards</span><span>DIN 7981 / 7982 / ISO 7049</span></li>
+            <li><span>Head styles</span><span>Pan, Countersunk, Hex washer</span></li>
+            <li><span>Finish</span><span>Zinc plated, Ruspert</span></li>
+            <li><span>MOQ</span><span>50,000 pcs / spec</span></li>
+          </ul>
+          <a href="#contact" class="link">View specifications →</a>
+        </div>
+      </div>
+
+      <div class="product-card reveal">
+        <div class="product-img">
+          <span class="tag">Non-Standard</span>
+          <svg viewBox="0 0 150 150" fill="none">
+            <rect x="40" y="20" width="70" height="26" rx="4" fill="#3B4653"/>
+            <ellipse cx="75" cy="50" rx="46" ry="8" fill="#5B6B7C"/>
+            <rect x="64" y="52" width="22" height="50" rx="3" fill="#8C97A4"/>
+            <rect x="56" y="102" width="38" height="12" rx="2" fill="#5B6B7C"/>
+            <rect x="64" y="114" width="22" height="24" rx="3" fill="#8C97A4"/>
+            <g stroke="#3B4653" stroke-width="2" opacity=".6"><path d="M64 62h22M64 72h22M64 82h22M64 92h22M64 122h22M64 130h22"/></g>
+            <g stroke="#E8A317" stroke-width="1.5" stroke-dasharray="3 3"><path d="M20 52h100M20 102h100"/></g>
+          </svg>
+        </div>
+        <div class="product-body">
+          <h3>Custom Cold-Forged Parts</h3>
+          <p>Special bolts, shoulder screws, washer-assembled and shaped parts made to your drawing — our highest-volume specialty.</p>
+          <ul class="spec-list">
+            <li><span>Input</span><span>STEP / PDF drawing</span></li>
+            <li><span>Process</span><span>Cold forging + CNC turning</span></li>
+            <li><span>Sampling</span><span>15 days typical</span></li>
+            <li><span>Reference</span><span>2M pcs/yr SCM435 washer bolt</span></li>
+          </ul>
+          <a href="#oem" class="link">How custom orders work →</a>
+        </div>
+      </div>
+
+      <div class="product-card reveal">
+        <div class="product-img" style="background: linear-gradient(160deg, var(--navy), var(--blue));">
+          <svg viewBox="0 0 150 150" fill="none" stroke="#E8A317" stroke-width="2.5">
+            <rect x="30" y="30" width="90" height="90" rx="8"/>
+            <path d="M30 60h90M60 30v90"/>
+            <path d="M75 75l15 15M90 75l-15 15"/>
+          </svg>
+        </div>
+        <div class="product-body">
+          <h3>Can't find your part?</h3>
+          <p>We carry over 1,000 specifications in standard production and can quote most DIN / ISO / ANSI items from your part number or drawing within 24 hours.</p>
+          <a href="#contact" class="btn btn-navy" style="margin-top:auto; align-self:flex-start;">Send Part List or Drawing</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- OEM / Custom -->
+<section class="section oem" id="oem">
+  <div class="container">
+    <div class="reveal">
+      <span class="eyebrow">OEM / ODM Service</span>
+      <h2>Custom Fasteners Made to Your Drawing</h2>
+      <p>Send us a STEP or PDF drawing and we handle tooling, cold forging, secondary turning, heat treatment and plating under one roof. Non-standard parts are where we add the most value — including a 2-million-piece-per-year shaped washer bolt in SCM435 we have supplied continuously for a European customer.</p>
+      <ul class="checks">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="#E8A317" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-6"/></svg>In-house tooling and die design for multi-station cold heading</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="#E8A317" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-6"/></svg>Own mesh-belt heat treatment line — consistent 10.9 / 12.9 properties</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="#E8A317" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-6"/></svg>Spectrometer material verification and salt-spray testing on site</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="#E8A317" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-6"/></svg>PPAP-style documentation and material certificates for every lot</li>
+      </ul>
+      <a href="#contact" class="btn btn-primary">Start a Custom Project</a>
+    </div>
+    <div class="steps reveal">
+      <div class="step"><div class="num">1</div><div><h4>Send Drawing &amp; Requirements</h4><p>STEP or PDF drawing, material, grade, finish, annual volume. We reply with a feasibility review within 24–48 hours.</p></div></div>
+      <div class="step"><div class="num">2</div><div><h4>Quotation &amp; Tooling Plan</h4><p>Unit price, tooling cost, lead time and recommended process (cold forging, turning or combined).</p></div></div>
+      <div class="step"><div class="num">3</div><div><h4>Samples in ~15 Days</h4><p>Tooling built and samples shipped with dimensional and material inspection report for your approval.</p></div></div>
+      <div class="step"><div class="num">4</div><div><h4>Mass Production</h4><p>First batch in 35–40 days, 100% optical sorting for automotive parts, repeat orders in 20–25 days.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Why us -->
+<section class="section" id="why">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Why Mingyue</span>
+      <h2>Built for Demanding Buyers</h2>
+      <p>Since 2009 we have supplied distributors, Tier-2 automotive suppliers and end-user factories across Europe and North America. Here is what keeps them coming back.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card reveal">
+        <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#0B2A4A" stroke-width="1.8"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V4h8v3M3 12h18"/></svg></div>
+        <h3>Real Factory, Full Process</h3>
+        <p>14 multi-station cold headers (6 new Taiwan-made 4-die 4-blow machines since 2022), 20 thread rollers and our own heat-treatment line — no outsourcing of core steps.</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#0B2A4A" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+        <h3>Automotive-Grade Quality</h3>
+        <p>IATF 16949 certified. Three automatic optical sorting machines deliver 100% inspection on automotive parts, backed by spectrometer and salt-spray lab.</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#0B2A4A" stroke-width="1.8"><path d="M4 4h16v16H4z"/><path d="M8 12h8M8 8h8M8 16h5"/></svg></div>
+        <h3>Documentation You Can Download</h3>
+        <p>Material test reports, RoHS (SGS) and IATF / ISO certificates are available for every order — the paperwork German and US buyers expect.</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#0B2A4A" stroke-width="1.8"><path d="M3 12h18M12 3a15 15 0 010 18M12 3a15 15 0 000 18"/><circle cx="12" cy="12" r="9"/></svg></div>
+        <h3>Export Experience</h3>
+        <p>Shipping to 23 countries, with Germany and Poland as our largest markets — one German partner alone takes 40+ containers a year. FOB Ningbo or CIF.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Equipment -->
+<section class="section equipment" style="padding-top:0;">
+  <div class="container">
+    <div class="section-head reveal" style="margin-bottom:30px; padding-top:70px;">
+      <span class="eyebrow">Production Capability</span>
+      <h2>Equipment at a Glance</h2>
+    </div>
+    <div class="equip-grid">
+      <div class="equip reveal"><strong>14</strong><span>Multi-station cold heading machines</span></div>
+      <div class="equip reveal"><strong>20</strong><span>Thread rolling machines</span></div>
+      <div class="equip reveal"><strong>1</strong><span>Mesh-belt heat treatment line</span></div>
+      <div class="equip reveal"><strong>3</strong><span>Automatic optical sorting machines</span></div>
+      <div class="equip reveal"><strong>1</strong><span>Optical emission spectrometer</span></div>
+      <div class="equip reveal"><strong>1</strong><span>Salt spray test chamber</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- Certifications -->
+<section class="section" id="certs">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Certifications</span>
+      <h2>Quality You Can Verify</h2>
+      <p>All certificates are available for download. Material test reports are issued with every shipment.</p>
+    </div>
+    <div class="cert-grid">
+      <div class="cert reveal">
+        <svg viewBox="0 0 80 80" fill="none"><circle cx="40" cy="40" r="36" stroke="#0B2A4A" stroke-width="3"/><circle cx="40" cy="40" r="28" stroke="#E8A317" stroke-width="2" stroke-dasharray="4 3"/><text x="40" y="37" text-anchor="middle" font-size="12" font-weight="bold" fill="#0B2A4A" font-family="Arial">ISO</text><text x="40" y="51" text-anchor="middle" font-size="11" fill="#0B2A4A" font-family="Arial">9001</text></svg>
+        <h3>ISO 9001:2015</h3>
+        <p>Quality management system, re-certified 2024.</p>
+        <a href="#contact" class="dl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 4v12M6 11l6 6 6-6M4 20h16"/></svg>Download PDF</a>
+      </div>
+      <div class="cert reveal">
+        <svg viewBox="0 0 80 80" fill="none"><circle cx="40" cy="40" r="36" stroke="#0B2A4A" stroke-width="3"/><circle cx="40" cy="40" r="28" stroke="#E8A317" stroke-width="2" stroke-dasharray="4 3"/><text x="40" y="37" text-anchor="middle" font-size="11" font-weight="bold" fill="#0B2A4A" font-family="Arial">IATF</text><text x="40" y="51" text-anchor="middle" font-size="11" fill="#0B2A4A" font-family="Arial">16949</text></svg>
+        <h3>IATF 16949</h3>
+        <p>Automotive quality management system, certified 2023.</p>
+        <a href="#contact" class="dl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 4v12M6 11l6 6 6-6M4 20h16"/></svg>Download PDF</a>
+      </div>
+      <div class="cert reveal">
+        <svg viewBox="0 0 80 80" fill="none"><circle cx="40" cy="40" r="36" stroke="#0B2A4A" stroke-width="3"/><circle cx="40" cy="40" r="28" stroke="#E8A317" stroke-width="2" stroke-dasharray="4 3"/><text x="40" y="37" text-anchor="middle" font-size="11" font-weight="bold" fill="#0B2A4A" font-family="Arial">SGS</text><text x="40" y="51" text-anchor="middle" font-size="11" fill="#0B2A4A" font-family="Arial">RoHS</text></svg>
+        <h3>SGS RoHS Report</h3>
+        <p>Third-party material compliance testing for EU markets.</p>
+        <a href="#contact" class="dl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 4v12M6 11l6 6 6-6M4 20h16"/></svg>Download PDF</a>
+      </div>
+    </div>
+    <p class="cert-note">Need a material test report for a specific lot? Contact sales with your order number and we will send it the same day.</p>
+  </div>
+</section>
+
+<!-- Markets -->
+<section class="section markets" id="markets">
+  <div class="container">
+    <div class="reveal">
+      <span class="eyebrow" style="color:var(--accent);font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;font-weight:700;display:block;margin-bottom:10px;">Global Reach</span>
+      <h2>Serving 23 Countries Since 2009</h2>
+      <p>Our customers are fastener distributors, automotive component suppliers and OEM factories. We understand European tolerances, documentation and delivery expectations, and we exhibit every year at Fastener Fair Stuttgart and Fastener Expo Shanghai.</p>
+      <div class="flags">
+        <span class="key">Germany</span><span class="key">United States</span><span class="key">Poland</span>
+        <span>Italy</span><span>Mexico</span><span>Netherlands</span><span>Czech Republic</span><span>Turkey</span><span>+ 15 more</span>
+      </div>
+    </div>
+    <div class="testimonials reveal">
+      <div class="quote">
+        <p>"Consistent 10.9 batches, reports always attached, and they answer our drawing questions the same day. We have moved more of our DIN 912 range to Mingyue every year."</p>
+        <strong>Purchasing Manager, Fastener Distributor</strong>
+        <small>Germany · 40+ containers per year</small>
+      </div>
+      <div class="quote">
+        <p>"They developed a custom washer bolt for our harvester line from our drawing in three weeks. Two seasons later, zero field failures."</p>
+        <strong>Supply Chain Lead, Agricultural Machinery Manufacturer</strong>
+        <small>Poland</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Trade terms -->
+<section class="section" style="padding-top:70px;padding-bottom:70px;">
+  <div class="container">
+    <div class="section-head reveal" style="margin-bottom:36px;">
+      <span class="eyebrow">Working With Us</span>
+      <h2>Clear Terms, No Surprises</h2>
+    </div>
+    <div class="terms-grid">
+      <div class="term reveal"><h4>Minimum Order</h4><strong>50,000 pcs / spec</strong><span>Non-standard parts from 100,000 pcs</span></div>
+      <div class="term reveal"><h4>Lead Time</h4><strong>20–25 days</strong><span>Standard parts · Custom first order 35–40 days</span></div>
+      <div class="term reveal"><h4>Payment</h4><strong>30% T/T deposit</strong><span>70% against B/L copy · OA 30 days for repeat customers</span></div>
+      <div class="term reveal"><h4>Shipping</h4><strong>FOB Ningbo</strong><span>CIF available on request</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section class="section contact" id="contact">
+  <div class="container">
+    <div class="reveal">
+      <h2>Request a Quotation</h2>
+      <p>Send us your part numbers, drawings or an RFQ list. Our export team replies within one business day with pricing, lead time and sample options.</p>
+      <ul class="contact-info">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="#E8A317" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><div><strong>Email</strong><span>sales@mingyue-fastener.com</span></div></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="#E8A317" stroke-width="2"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg><div><strong>Factory</strong><span>No. 88 Muyu Road, Zeguo Industrial Zone, Wenling, Taizhou, Zhejiang 317523, China</span></div></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="#E8A317" stroke-width="2"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/></svg><div><strong>Meet Us</strong><span>Fastener Fair Stuttgart, 24 March — booth details on request</span></div></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="#E8A317" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><div><strong>Office Hours</strong><span>Monday – Saturday, 8:00 – 17:30 (GMT+8)</span></div></li>
+      </ul>
+    </div>
+    <div class="form reveal">
+      <form id="rfq" novalidate>
+        <h3>Send an RFQ</h3>
+        <p>Fields marked * are required.</p>
+        <div class="form-row">
+          <div class="field"><label for="name">Name *</label><input id="name" type="text" required placeholder="Your name"></div>
+          <div class="field"><label for="company">Company *</label><input id="company" type="text" required placeholder="Company name"></div>
+        </div>
+        <div class="form-row">
+          <div class="field"><label for="email">Email *</label><input id="email" type="email" required placeholder="name@company.com"></div>
+          <div class="field"><label for="country">Country</label><input id="country" type="text" placeholder="Germany"></div>
+        </div>
+        <div class="field">
+          <label for="product">Product Category</label>
+          <select id="product">
+            <option>Socket Head Cap Screws (DIN 912)</option>
+            <option>Hex Flange Bolts (DIN 6921)</option>
+            <option>Automotive High-Strength Bolts</option>
+            <option>Self-Tapping Screws</option>
+            <option>Custom / Non-Standard Parts</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="msg">Requirements *</label>
+          <textarea id="msg" required placeholder="Part number, size, grade, finish, quantity, target market... or tell us you will attach a drawing by email."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit Request</button>
+        <small>We respond within 1 business day. Your information is never shared.</small>
+      </form>
+      <div class="form-success" id="success">
+        <svg viewBox="0 0 64 64" fill="none" stroke="#1F5A8E" stroke-width="3"><circle cx="32" cy="32" r="28"/><path d="M20 33l8 8 16-18"/></svg>
+        <h3>Thank you!</h3>
+        <p>Your request has been received. Our export team will reply within one business day.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo">
+          <div class="logo-mark"><svg viewBox="0 0 32 32" fill="none"><path d="M16 3l11 6.5v13L16 29 5 22.5v-13L16 3z" stroke="#E8A317" stroke-width="2.2"/><circle cx="16" cy="16" r="4.5" fill="#E8A317"/></svg></div>
+          <div class="logo-text"><strong>MINGYUE FASTENER</strong><small>Precision Since 2009</small></div>
+        </div>
+        <p>Mingyue Fastener Co., Ltd. is a cold-forged fastener manufacturer based in Wenling, Zhejiang — 68 employees, 6,500 m² plant, serving automotive and industrial customers in 23 countries.</p>
+        <p style="margin:0; font-size:.8rem; color:rgba(255,255,255,.45);">ISO 9001:2015 · IATF 16949 · SGS RoHS</p>
+      </div>
+      <div>
+        <h4>Products</h4>
+        <ul>
+          <li><a href="#products">Socket Head Cap Screws</a></li>
+          <li><a href="#products">Hex Flange Bolts</a></li>
+          <li><a href="#products">Automotive Bolts 10.9</a></li>
+          <li><a href="#products">Self-Tapping Screws</a></li>
+          <li><a href="#oem">Custom Cold-Forged Parts</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#why">About Mingyue</a></li>
+          <li><a href="#certs">Certifications</a></li>
+          <li><a href="#oem">OEM / ODM Service</a></li>
+          <li><a href="#markets">Markets</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li>sales@mingyue-fastener.com</li>
+          <li>No. 88 Muyu Road, Zeguo Industrial Zone,<br>Wenling, Taizhou, Zhejiang, China</li>
+          <li>Mon – Sat 8:00 – 17:30 (GMT+8)</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Mingyue Fastener Co., Ltd. All rights reserved.</span>
+      <span>Taizhou Mingyue Fastener Co., Ltd. · Zhejiang, China</span>
+    </div>
+  </div>
+</footer>
+
+<button id="toTop" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="#0B2A4A" stroke-width="3"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+
+<script>
+  // Mobile menu
+  document.getElementById('burger').addEventListener('click', function () {
+    document.getElementById('menu').classList.toggle('open');
+  });
+  document.querySelectorAll('#menu a').forEach(function (a) {
+    a.addEventListener('click', function () { document.getElementById('menu').classList.remove('open'); });
+  });
+
+  // Reveal on scroll
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
+
+  // Back to top
+  var toTop = document.getElementById('toTop');
+  window.addEventListener('scroll', function () {
+    toTop.classList.toggle('show', window.scrollY > 500);
+  });
+  toTop.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+
+  // Form
+  document.getElementById('rfq').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var ok = true;
+    this.querySelectorAll('[required]').forEach(function (f) {
+      if (!f.value.trim() || (f.type === 'email' && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(f.value))) {
+        f.style.borderColor = '#D9534F'; ok = false;
+      } else { f.style.borderColor = ''; }
+    });
+    if (!ok) return;
+    this.style.display = 'none';
+    document.getElementById('success').style.display = 'block';
+  });
+</script>
+</body>
+</html>

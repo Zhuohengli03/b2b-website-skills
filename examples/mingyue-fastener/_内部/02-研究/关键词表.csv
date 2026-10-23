@@ -1,0 +1,49 @@
+词,类型,市场/语言,估计量,量级依据,意图,用在哪
+socket head cap screw manufacturer,核心品类词,US/DE/PL-EN,估计：中,"无工具数据；上位词 fastener 美国月搜 40,500（seodata.dev 2026-06），品类+manufacturer 为其长尾",商业-找供应商,分类页标题（DIN 912 / ISO 4762）
+hex socket head cap screws supplier,核心品类词,US/DE/PL-EN,估计：中,同上；Würth/Bossard 分类页标题用 Hexagon Socket Head Cap Screw,商业-找供应商,分类页 H1 / 描述
+hex flange bolt manufacturer,核心品类词,US/DE/PL-EN,估计：中,无工具数据；DIN 6921 分类词,商业-找供应商,分类页标题（DIN 6921）
+flange bolts supplier China,核心品类词,US/DE/PL-EN,估计：中,无工具数据；国内同行站常用后缀,商业-找供应商,分类页描述
+self tapping screws manufacturer,核心品类词,US/DE/PL-EN,估计：中,无工具数据；Marcopol 产品组 wkręty samogwintujące 对应,商业-找供应商,分类页标题（自攻螺钉）
+automotive fasteners manufacturer,核心品类词,US/DE/PL-EN,估计：中,无工具数据；Kamax 首屏「automotive」定位,商业-找供应商,分类页标题（汽车高强度螺栓）
+high strength bolts 10.9 manufacturer,核心品类词,US/DE/PL-EN,估计：中低,无工具数据；Portland Bolt 首屏用 High-Strength,商业-找供应商,分类页 H1（汽车高强度螺栓）
+cold forged fasteners manufacturer,核心品类词,US/DE/PL-EN,估计：中低,无工具数据；工艺词，工厂站定位用语,商业-找供应商,首页标题 / About
+cold heading parts custom,核心品类词,US/DE/PL-EN,估计：低,无工具数据；非标冷镦件采购术语,商业-找定制厂,非标定制页标题
+custom fasteners to drawing,核心品类词,US/DE/PL-EN,估计：中低,无工具数据；Marcopol「dopasowane do Twoich potrzeb」对应,商业-找定制厂,非标定制页 H1
+fastener manufacturer China,核心品类词,US/DE/PL-EN,估计：高,"上位词 fastener 美国 40,500/月（seodata.dev）；+China 为常见搜法",商业-找供应商,首页标题
+OEM fastener factory,核心品类词,US/DE/PL-EN,估计：中低,无工具数据；国内同行站常用,商业-找供应商,首页描述 / About
+Zylinderschrauben Hersteller,核心品类词,DE,估计：中,无工具数据；德语品类词（DIN 912 德语名 Zylinderschrauben mit Innensechskant，Bossard ch-de 页用）,商业-找供应商,英文站 FAQ 承接；下一期德语分类页
+Flanschschrauben Lieferant,核心品类词,DE,估计：中低,无工具数据；DIN 6921 德语名 Sechskantschrauben mit Flansch,商业-找供应商,下一期德语分类页
+śruby imbusowe producent,核心品类词,PL,估计：中,无工具数据；波兰语 DIN 912 名 śruby imbusowe（RS Polska 页用）,商业-找供应商,英文站 FAQ 承接；下一期波兰语分类页
+śruby kołnierzowe producent,核心品类词,PL,估计：低,无工具数据；DIN 6921 波兰语名,商业-找供应商,下一期波兰语分类页
+DIN 912 socket head cap screw,采购术语与长尾,US/DE/PL-EN,估计：中,标准号词；8 家竞品中 Bossard、Würth 页标题含 DIN 912,交易-已定标准,分类页 H1 并列 ISO 4762
+ISO 4762 hexagon socket head cap screw,采购术语与长尾,US/DE/PL-EN,估计：中,Bossard 标 DIN 912 已撤回、ISO 4762 替代；Würth 注 ISO 4762 replaces DIN 912,交易-已定标准,分类页 H1 并列 DIN 912
+DIN 912 M6x20 12.9 black oxide,采购术语与长尾,US/DE/PL-EN,估计：低,型号级精准词；需求单代表型号 F6,交易-已定型号,型号页标题 / URL（DIN912-M6x20-12.9-BO）
+DIN 6921 hexagon flange bolt,采购术语与长尾,US/DE/PL-EN,估计：中低,标准号词,交易-已定标准,分类页 H1（DIN 6921）
+DIN 6921 M8x25 10.9 zinc flake,采购术语与长尾,US/DE/PL-EN,估计：低,型号级精准词；需求单代表型号 F7（Dacromet 为商标，写 zinc flake）,交易-已定型号,型号页标题 / URL
+ISO 898-1 property class 10.9 bolts,采购术语与长尾,US/DE/PL-EN,估计：低,ISO 898-1 为强度等级标准；RS 产品页标题含 ISO 898-1,交易-规格,汽车高强度螺栓分类页描述 / 参数表
+12.9 socket cap screws black oxide,采购术语与长尾,US/DE/PL-EN,估计：中低,Fusion Fixings 等分销页用「Grade 12.9 … DIN 912」命名,交易-规格,分类页筛选项（等级 + 表面）
+hex socket cap screw M3-M24,采购术语与长尾,US/DE/PL-EN,估计：低,Würth 页 H1 用 ≤ M24 / ≥ M24 分段,交易-规格,分类页规格范围句
+salt spray 720 hours zinc flake bolts,采购术语与长尾,US/DE/PL-EN,估计：低,需求单 F7 盐雾 ≥720h；采购参数词,交易-规格,型号页参数表 / Quality 页
+flange bolt with serrated underhead,采购术语与长尾,US/DE/PL-EN,估计：低,fasten.it 目录用「with or without knurled underhead」,交易-规格,DIN 6921 分类页描述
+self tapping screw DIN 7981 DIN 7982,采购术语与长尾,US/DE/PL-EN,估计：低,标准号词；客户自攻螺钉具体标准待确认,交易-已定标准,自攻螺钉分类页（标准号待客户确认）
+SCM435 cold forged bolt,采购术语与长尾,US/DE/PL-EN,估计：低,材料牌号；需求单 F8 非标件材料,交易-规格,非标定制页材料表
+10.9 automotive bolts IATF 16949 supplier,采购术语与长尾,US/DE/PL-EN,估计：低,认证 + 品类组合；国内目录页高频用 IATF 16949,商业-合规筛选,汽车高强度螺栓分类页 / Quality 页
+EN 10204 3.1 certificate fasteners,采购术语与长尾,DE/PL-EN,估计：低,欧盟材质证明惯例；Würth 产品页设 Certificates/Documents 栏,交易-合规文件,Quality & Downloads 页 / 型号页下载区
+PPAP fastener supplier,采购术语与长尾,US/DE-EN,估计：低,汽车链采购术语（IATF 配套）,商业-合规筛选,非标定制页流程段
+fastener CBAM data supplier,采购术语与长尾,DE/PL-EN,估计：低,Reyher、Marcopol 均设 CBAM 专页，采购会问,商业-合规筛选,FAQ
+REACH RoHS compliant fasteners,采购术语与长尾,DE/PL-EN,估计：低,需求单 F5 SGS RoHS 报告,商业-合规筛选,Quality 页
+Zylinderschrauben mit Innensechskant DIN 912 8.8,采购术语与长尾,DE,估计：中,Bossard ch-de 产品页标题原文；搜索结果多家德国分销页用此词,交易-已定标准,FAQ（德语词承接）；下一期德语型号页
+Sechskantschrauben mit Flansch DIN 6921,采购术语与长尾,DE,估计：低,德语标准名,交易-已定标准,下一期德语分类页
+śruba imbusowa DIN 912 M8,采购术语与长尾,PL,估计：中低,RS Polska 产品页标题模式「Śruba imbusowa M8 …」,交易-规格,下一期波兰语型号页
+śruby do maszyn rolniczych producent,采购术语与长尾,PL,估计：低,客户有波兰农机厂客户（F14）；Marcopol 按行业分类有 motoryzacyjna,商业-行业,FAQ / 案例段（波兰农机）
+how to choose socket head cap screw grade,问题型,US/DE/PL-EN,估计：中低,Xinchi 博客有同题文章（竞品已在做）,信息-选型,FAQ / 博客
+12.9 vs 10.9 bolts difference,问题型,US/DE/PL-EN,估计：中,等级对比为常见问题,信息-选型,FAQ
+ISO 4762 vs DIN 912 difference,问题型,US/DE/PL-EN,估计：中低,Würth 页专门注释两者差异与细牙移 ISO 12474,信息-标准,FAQ / 分类页说明段
+black oxide vs zinc plated screws,问题型,US/DE/PL-EN,估计：中,Xinchi 博客有同题文章,信息-表面处理,FAQ / 博客
+zinc flake vs hot dip galvanized bolts,问题型,US/DE/PL-EN,估计：低,表面处理对比；Portland Bolt 强调自有热镀锌,信息-表面处理,博客
+fastener MOQ China factory,问题型,US/DE/PL-EN,估计：低,采购惯例问题；需求单 F10,信息-交易条件,FAQ（MOQ 5万件/规格）
+cold forged bolt lead time,问题型,US/DE/PL-EN,估计：低,交期问题；需求单 F10,信息-交易条件,FAQ（20–25 天 / 非标 35–40 天）
+cold heading vs machining fasteners,问题型,US/DE/PL-EN,估计：低,工艺对比；非标页卖点,信息-工艺,非标定制页问答
+what is a 3.1 material certificate,问题型,DE/PL-EN,估计：低,德国客户硬要求材质报告（需求表 47）,信息-合规文件,FAQ / Quality 页
+how to request a sample from a fastener factory,问题型,US/DE/PL-EN,估计：低,15 天出样流程（F9）,信息-流程,非标定制页 CTA 段
+fastener price per 1000 pcs China,问题型,US/DE/PL-EN,估计：中低,价格类问题；不公开价，用 FAQ 引导询盘,信息-价格,FAQ（引导至询盘，不报价）

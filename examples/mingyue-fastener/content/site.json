@@ -1,0 +1,102 @@
+{
+  "name": "Mingyue Fastener Co., Ltd.",
+  "nameLocal": "台州铭岳紧固件有限公司",
+  "wordmark": "MINGYUE FASTENER",
+  "tagline": "Precision since 2009",
+  "taglineCaps": "MINGYUE FASTENER · PRECISION SINCE 2009",
+  "logoTodo": "[待确认：logo 源文件]",
+  "baseUrl": "https://www.mingyue-fastener.com",
+  "email": "sales@mingyue-fastener.com",
+  "phone": "[待确认：固定电话]",
+  "officeHours": "[待确认：工作时间，D22]",
+  "timezone": "China Standard Time (UTC+8)",
+  "address": {
+    "street": "No. 88 Muyu Road, Zeguo Industrial Zone",
+    "city": "Wenling",
+    "region": "Taizhou, Zhejiang",
+    "country": "China",
+    "countryCode": "CN"
+  },
+  "founded": "2009",
+  "search": {
+    "placeholder": "DIN912-M6x20",
+    "label": "Search by model string or standard",
+    "action": "/products/"
+  },
+  "cta": {
+    "primary": "Request a Quote",
+    "primaryHref": "/contact/"
+  },
+  "nav": [
+    {
+      "label": "Products",
+      "href": "/products/",
+      "dropdown": [
+        {
+          "title": "By standard",
+          "items": [
+            { "label": "Hexagon Socket Head Cap Screws", "sub": "ISO 4762 / DIN 912", "href": "/products/socket-head-cap-screws-iso-4762-din-912/" },
+            { "label": "Hexagon Flange Bolts", "sub": "DIN 6921", "href": "/products/hexagon-flange-bolts-din-6921/" },
+            { "label": "Self-Tapping Screws", "sub": "[待确认：标准号]", "href": "/products/self-tapping-screws/" },
+            { "label": "Automotive High-Strength Bolts", "sub": "Property class 10.9", "href": "/products/automotive-high-strength-bolts-10-9/" }
+          ]
+        },
+        {
+          "title": "To your drawing",
+          "items": [
+            { "label": "Custom Cold-Formed Parts", "sub": "STEP / PDF", "href": "/custom-cold-formed-parts/" }
+          ]
+        },
+        {
+          "title": "All",
+          "items": [
+            { "label": "Browse all sizes →", "href": "/products/" }
+          ]
+        }
+      ]
+    },
+    { "label": "Custom Cold-Formed Parts", "href": "/custom-cold-formed-parts/" },
+    { "label": "Quality & Downloads", "href": "/quality-downloads/" },
+    { "label": "About Us", "href": "/about/" },
+    { "label": "FAQ", "href": "/faq/" },
+    { "label": "Contact", "href": "/contact/" }
+  ],
+  "footer": {
+    "products": {
+      "title": "Products",
+      "links": [
+        { "label": "Socket Head Cap Screws ISO 4762 / DIN 912", "href": "/products/socket-head-cap-screws-iso-4762-din-912/" },
+        { "label": "Hexagon Flange Bolts DIN 6921", "href": "/products/hexagon-flange-bolts-din-6921/" },
+        { "label": "Self-Tapping Screws", "href": "/products/self-tapping-screws/" },
+        { "label": "Automotive High-Strength Bolts 10.9", "href": "/products/automotive-high-strength-bolts-10-9/" },
+        { "label": "Custom Cold-Formed Parts", "href": "/custom-cold-formed-parts/" },
+        { "label": "All Products", "href": "/products/" }
+      ]
+    },
+    "company": {
+      "title": "Company",
+      "links": [
+        { "label": "About Us", "href": "/about/" },
+        { "label": "Quality & Downloads", "href": "/quality-downloads/" },
+        { "label": "News & Trade Fairs", "href": "/about/news/" },
+        { "label": "FAQ", "href": "/faq/" },
+        { "label": "Contact", "href": "/contact/" }
+      ]
+    },
+    "legal": {
+      "title": "Legal",
+      "links": [
+        { "label": "Privacy Policy", "href": "/privacy/" },
+        { "label": "Imprint", "href": "/imprint/" }
+      ]
+    },
+    "certLine": "ISO 9001:2015 · IATF 16949 · RoHS compliant, SGS report [待确认：证书扫描件]",
+    "contactTitle": "Contact"
+  },
+  "ctaEnd": {
+    "titleMono": "Standard, size, class",
+    "titleRest": " — that's all we need to quote",
+    "sub": "Add your annual quantity and target market, and we quote FOB Ningbo with lead time and MOQ.",
+    "orEmail": "or email"
+  }
+}

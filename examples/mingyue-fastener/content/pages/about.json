@@ -1,0 +1,57 @@
+{
+  "h1": "Cold-Forming Fasteners in Wenling Since 2009",
+  "body": "Mingyue Fastener Co., Ltd. is a fastener factory in Wenling, Taizhou, Zhejiang, China: 68 people on a 6,500 m² site, running cold heading, thread rolling, heat treatment and optical sorting in-house. Founded in 2009, IATF 16949 certified since 2023 [待确认：证书扫描件], exporting to 23 countries.",
+  "founderNote": "[待确认：老板简介原文，D6]",
+  "primary": { "label": "Request a Quote", "href": "/contact/" },
+  "secondary": { "label": "Download Certificates", "href": "/quality-downloads/#certificates" },
+  "photo": { "todo": "[待确认：厂区实拍]", "alt": "Mingyue Fastener plant, Zeguo Industrial Zone, Wenling", "spec": "Factory gate with sign, front view · sunny morning · landscape 16:9" },
+  "process": {
+    "h2": "Four processes, one site",
+    "carrierAlt": "Line drawing of DIN 912 M6×20 socket head cap screw with the four process stages: cold heading, thread rolling, heat treatment, optical sorting",
+    "steps": [
+      { "title": "Cold heading", "text": "14 multi-station cold headers, six of them four-die four-blow machines installed in 2022, form head and shank from coil wire." },
+      { "title": "Thread rolling", "text": "20 thread rolling machines roll the thread after heading; rolling keeps the grain flow continuous and holds tolerance 6g." },
+      { "title": "Heat treatment", "text": "One mesh-belt furnace line on site hardens and tempers to class 10.9 and 12.9, so no batch leaves for an outside heat treater." },
+      { "title": "Optical sorting", "text": "Three automatic optical sorting machines inspect 100% of automotive parts; a spectrometer and a salt-spray chamber back up material and coating checks." }
+    ],
+    "counters": [
+      { "num": "100", "suffix": "%", "sr": "100%", "label": "Optically sorted, automotive", "accent": true, "count": true },
+      { "num": "15", "suffix": " days", "sr": "15 days", "label": "Custom sample lead time", "count": true },
+      { "num": "180", "suffix": " million", "sr": "180 million", "label": "Pieces per year", "count": true },
+      { "num": "IATF", "suffix": " 16949", "sr": "IATF 16949", "label": "Certified 2023 [待确认：证书扫描件]", "count": false }
+    ]
+  },
+  "equipment": {
+    "h2": "Equipment",
+    "head": ["Equipment", "Qty", "Note"],
+    "rows": [
+      { "equipment": "Multi-station cold headers", "qty": "14", "note": "6 four-die four-blow machines, Taiwan-built, installed 2022" },
+      { "equipment": "Thread rolling machines", "qty": "20", "note": "—" },
+      { "equipment": "Heat treatment line", "qty": "1", "note": "Mesh-belt furnace, in-house" },
+      { "equipment": "Automatic optical sorting machines", "qty": "3", "note": "100% sorting of automotive parts" },
+      { "equipment": "Spectrometer", "qty": "1", "note": "Material composition verification" },
+      { "equipment": "Salt-spray chamber", "qty": "1", "note": "Coating corrosion testing" }
+    ],
+    "photos": [
+      { "todo": "[待确认：车间实拍]", "alt": "Four-die four-blow cold headers, Mingyue Fastener, Wenling", "spec": "Machine row at 45° · no faces · 4:3" },
+      { "todo": "[待确认：车间实拍]", "alt": "Mesh-belt furnace heat treatment line, Mingyue Fastener", "spec": "Machine row at 45° · no faces · 4:3" }
+    ]
+  },
+  "milestones": {
+    "h2": "Milestones",
+    "items": [
+      { "year": "2009", "text": "Mingyue Fastener founded in Wenling, Zhejiang" },
+      { "year": "2022", "text": "Six four-die four-blow cold headers from Taiwan installed" },
+      { "year": "2023", "text": "IATF 16949 certification [待确认：证书扫描件]" },
+      { "year": "2024", "text": "ISO 9001:2015 recertified [待确认：证书扫描件]" }
+    ]
+  },
+  "customers": {
+    "h2": "Customers and trade fairs",
+    "text": "Customers include a fastener distributor in Germany [待确认：客户名，D5] and an agricultural machinery manufacturer in Poland [待确认：客户名，D5]; shipments also go to Italy, Mexico and the United States — 23 countries in all. Meet us at Fastener Fair Global in Stuttgart [待确认：展会日期，D14] and at the Shanghai fastener show [待确认：展会名称与日期，D24]; we exhibit at both every year."
+  },
+  "ctaEnd": {
+    "title": "Request a quotation, or schedule a factory audit",
+    "primary": { "label": "Request a Quote", "href": "/contact/?topic=audit" }
+  }
+}

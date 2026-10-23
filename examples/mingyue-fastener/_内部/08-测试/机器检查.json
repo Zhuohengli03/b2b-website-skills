@@ -1,0 +1,128 @@
+{
+  "pages": 18,
+  "summary": {
+    "P0": 1,
+    "P1": 18,
+    "P2": 0
+  },
+  "perf": {
+    "homeBytes": 62800,
+    "lcpMs": 120
+  },
+  "findings": [
+    {
+      "level": "P1",
+      "page": "/404.html",
+      "rule": "占位",
+      "detail": "6 处 [待确认] 占位仍在页面上（上线前须清零）"
+    },
+    {
+      "level": "P1",
+      "page": "/about/index.html",
+      "rule": "占位",
+      "detail": "21 处 [待确认] 占位仍在页面上（上线前须清零）"
+    },
+    {
+      "level": "P1",
+      "page": "/about/news/index.html",
+      "rule": "占位",
+      "detail": "12 处 [待确认] 占位仍在页面上（上线前须清零）"
+    },
+    {
+      "level": "P1",
+      "page": "/contact/index.html",
+      "rule": "占位",
+      "detail": "9 处 [待确认] 占位仍在页面上（上线前须清零）"
+    },
+    {
+      "level": "P0",
+      "page": "/contact/index.html",
+      "rule": "表单",
+      "detail": "表单接收端为空（data-endpoint / action）——提交后邮件到不了"
+    },
+    {
+      "level": "P1",
+      "page": "/contact/thank-you/index.html",
+      "rule": "占位",
+      "detail": "7 处 [待确认] 占位仍在页面上（上线前须清零）"
+    },
+    {
+      "level": "P1",
+      "page": "/custom-cold-formed-parts/index.html",
+      "rule": "占位",
+      "detail": "21 处 [待确认] 占位仍在页面上（上线前须清零）"
+    },
+    {
+      "level": "P1",
+      "page": "/faq/index.html",
+      "rule": "占位",
+      "detail": "17 处 [待确认] 占位仍在页面上（上线前须清零）"
+    },
+    {
+      "level": "P1",
+      "page": "/imprint/index.html",
+      "rule": "占位",
+      "detail": "9 处 [待确认] 占位仍在页面上（上线前须清零）"
+    },
+    {
+      "level": "P1",
+      "page": "/index.html",
+      "rule": "占位",
+      "detail": "24 处 [待确认] 占位仍在页面上（上线前须清零）"
+    },
+    {
+      "level": "P1",
+      "page": "/privacy/index.html",
+      "rule": "占位",
+      "detail": "9 处 [待确认] 占位仍在页面上（上线前须清零）"
+    },
+    {
+      "level": "P1",
+      "page": "/products/automotive-high-strength-bolts-10-9/index.html",
+      "rule": "占位",
+      "detail": "19 处 [待确认] 占位仍在页面上（上线前须清零）"
+    },
+    {
+      "level": "P1",
+      "page": "/products/din6921-m8x25-10-9-zf/index.html",
+      "rule": "占位",
+      "detail": "19 处 [待确认] 占位仍在页面上（上线前须清零）"
+    },
+    {
+      "level": "P1",
+      "page": "/products/din912-m6x20-12-9-bo/index.html",
+      "rule": "占位",
+      "detail": "17 处 [待确认] 占位仍在页面上（上线前须清零）"
+    },
+    {
+      "level": "P1",
+      "page": "/products/hexagon-flange-bolts-din-6921/index.html",
+      "rule": "占位",
+      "detail": "15 处 [待确认] 占位仍在页面上（上线前须清零）"
+    },
+    {
+      "level": "P1",
+      "page": "/products/index.html",
+      "rule": "占位",
+      "detail": "20 处 [待确认] 占位仍在页面上（上线前须清零）"
+    },
+    {
+      "level": "P1",
+      "page": "/products/self-tapping-screws/index.html",
+      "rule": "占位",
+      "detail": "21 处 [待确认] 占位仍在页面上（上线前须清零）"
+    },
+    {
+      "level": "P1",
+      "page": "/products/socket-head-cap-screws-iso-4762-din-912/index.html",
+      "rule": "占位",
+      "detail": "16 处 [待确认] 占位仍在页面上（上线前须清零）"
+    },
+    {
+      "level": "P1",
+      "page": "/quality-downloads/index.html",
+      "rule": "占位",
+      "detail": "22 处 [待确认] 占位仍在页面上（上线前须清零）"
+    }
+  ]
+}

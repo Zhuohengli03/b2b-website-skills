@@ -1,0 +1,11 @@
+{
+  "name": "b2b-website-skills",
+  "owner": { "name": "b2b-website-skills contributors" },
+  "plugins": [
+    {
+      "name": "b2b-website-skills",
+      "source": "./",
+      "description": "出海B2B建站 Agent 流水线：10 个岗位 skill + 1 个执行器，从需求表到可上线的询盘站。"
+    }
+  ]
+}

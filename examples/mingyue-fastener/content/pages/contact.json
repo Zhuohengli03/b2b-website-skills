@@ -1,0 +1,41 @@
+{
+  "h1": "Contact Mingyue Fastener",
+  "intro": "Send the standard, size, property class, finish and annual quantity, or attach a drawing (PDF or STEP). Replies come by email from our export sales team.",
+  "form": {
+    "endpoint": "",
+    "endpointTodo": "[待确认：表单接收端]",
+    "endpointNote": "Form receiving endpoint to be configured",
+    "fields": [
+      { "name": "name", "label": "Name", "type": "text", "required": true, "placeholder": "e.g. Anna Schmidt", "autocomplete": "name", "error": "Please enter your name" },
+      { "name": "email", "label": "Email", "type": "email", "required": true, "placeholder": "name@company.com", "autocomplete": "email", "error": "Please enter a valid email address" },
+      { "name": "company", "label": "Company", "type": "text", "placeholder": "Company name", "autocomplete": "organization" },
+      { "name": "country", "label": "Country", "type": "select", "autocomplete": "country-name", "first": ["Germany", "United States", "Poland"] },
+      { "name": "model", "label": "Standard & size", "type": "text", "placeholder": "e.g. DIN 912 M6×20 12.9 black oxide", "mono": true },
+      { "name": "quantity", "label": "Quantity", "type": "text", "placeholder": "e.g. 50,000 pcs per size", "inputmode": "numeric" },
+      { "name": "message", "label": "Message", "type": "textarea", "required": true, "placeholder": "Application, target market, certificates needed, delivery date", "error": "Please tell us what you need" },
+      { "name": "attachment", "label": "Attachment", "type": "file", "help": "PDF or STEP; drag and drop", "accept": ".pdf,.step,.stp" }
+    ],
+    "topics": ["quote", "certificate", "3.1", "custom", "not-listed", "audit", "fair"],
+    "prefill": {
+      "not-listed": "Size not listed:",
+      "audit": "Factory audit:"
+    },
+    "submit": "Request a Quote",
+    "sending": "Sending…",
+    "consent": "By sending this form you agree to our Privacy Policy.",
+    "consentLink": { "label": "Privacy Policy", "href": "/privacy/" },
+    "errorBanner": "Your request could not be sent. Please check the fields marked below, or email sales@mingyue-fastener.com.",
+    "requiredNote": "* required"
+  },
+  "aside": {
+    "title": "Mingyue Fastener Co., Ltd.",
+    "phoneLabel": "Tel.",
+    "hoursLabel": "Office hours"
+  },
+  "thankYou": {
+    "h1": "Request received",
+    "text": "Thank you. Your request is in our export sales inbox, sales@mingyue-fastener.com, and will be answered by email. Meanwhile, browse the product catalog or download our certificates [待确认：证书扫描件].",
+    "secondary": { "label": "Browse Products", "href": "/products/" },
+    "link": { "label": "Download Certificates", "href": "/quality-downloads/#certificates" }
+  }
+}

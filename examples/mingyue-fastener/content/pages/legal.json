@@ -1,0 +1,30 @@
+{
+  "privacy": {
+    "h1": "Privacy Policy",
+    "_note": "文案稿十二节：正文由 Complianz 模板生成；静态站无 Complianz，此处只放文案稿指定的必填信息，措辞最简。GA4 与 Cookie 条款在后端 / SEO 接入分析工具后补全。",
+    "sections": [
+      { "h2": "Data controller", "p": "Mingyue Fastener Co., Ltd., No. 88 Muyu Road, Zeguo Industrial Zone, Wenling, Taizhou, Zhejiang, China, sales@mingyue-fastener.com. Legal representative / data protection contact: [待确认：D23]." },
+      { "h2": "Inquiry form", "p": "The details you enter in the contact form (name, email, company, country, standard & size, quantity, message, attachment) are used to answer your inquiry and prepare a quotation. They are sent to sales@mingyue-fastener.com and are not passed to third parties." },
+      { "h2": "Analytics", "p": "Analytics tool: GA4 [待确认：分析工具接入与同意条，后端 / SEO]. No analytics script is loaded on this site until it has been configured." },
+      { "h2": "Cookies", "p": "Cookie terms follow the consent banner configuration [待确认：Cookie 同意条，后端]. This site sets no cookies of its own." }
+    ]
+  },
+  "imprint": {
+    "h1": "Imprint",
+    "rows": [
+      { "k": "Company", "v": "Mingyue Fastener Co., Ltd. (台州铭岳紧固件有限公司)" },
+      { "k": "Address", "v": "No. 88 Muyu Road, Zeguo Industrial Zone, Wenling, Taizhou, Zhejiang, China" },
+      { "k": "Email", "v": "sales@mingyue-fastener.com", "mailto": true },
+      { "k": "Legal representative", "v": "[待确认：D23]" },
+      { "k": "Company registration no.", "v": "[待确认：D23]" },
+      { "k": "VAT / EORI", "v": "[待确认：D23]" }
+    ]
+  },
+  "notFound": {
+    "_note": "文案稿无 404 页文案；此处为最简英文，待文案回流",
+    "h1": "Page not found",
+    "text": "The page you requested does not exist or has moved. Browse the product catalog or search by model string.",
+    "primary": { "label": "Browse Products", "href": "/products/" },
+    "secondary": { "label": "Contact", "href": "/contact/" }
+  }
+}

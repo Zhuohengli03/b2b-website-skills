@@ -1,0 +1,68 @@
+{
+  "h1": "Quality System, Inspection and Downloads",
+  "sub": "IATF 16949 certified since 2023 and ISO 9001:2015, recertified in 2024 [待确认：证书扫描件]. Material verified by spectrometer, coatings salt-spray tested, automotive parts 100% optically sorted.",
+  "primary": { "label": "Request a Quote", "href": "/contact/" },
+  "secondary": { "label": "Download Certificates", "href": "#certificates" },
+  "inspection": {
+    "h2": "Inspection equipment",
+    "head": ["Equipment", "Qty", "Purpose"],
+    "rows": [
+      { "equipment": "Spectrometer", "qty": "1", "purpose": "Verifies material composition before wire goes into production" },
+      { "equipment": "Salt-spray chamber", "qty": "1", "purpose": "Tests coated parts; zinc flake 10.9 flange bolts reach ≥ 720 h" },
+      { "equipment": "Automatic optical sorting machines", "qty": "3", "purpose": "100% sorting of automotive parts for dimensional and surface defects" },
+      { "equipment": "Heat treatment line, mesh-belt furnace", "qty": "1", "purpose": "In-house hardening and tempering to class 10.9 and 12.9" }
+    ],
+    "photos": [
+      { "todo": "[待确认：检验设备实拍]", "alt": "Automatic optical sorting machine inspecting automotive bolts, Mingyue Fastener", "spec": "Equipment front, screen visible while running · landscape" },
+      { "todo": "[待确认：检验设备实拍]", "alt": "Salt-spray test chamber, Mingyue Fastener quality lab", "spec": "Equipment front, screen visible while running · landscape" }
+    ]
+  },
+  "downloads": {
+    "h2": "Certificates & Downloads",
+    "pdfComing": "PDF coming",
+    "columns": [
+      {
+        "id": "certificates",
+        "title": "Certificates",
+        "icon": "ic-cert",
+        "items": [
+          { "label": "ISO 9001:2015 certificate (PDF)", "todo": "[待确认：证书扫描件]" },
+          { "label": "IATF 16949 certificate (PDF)", "todo": "[待确认：证书扫描件]" },
+          { "label": "SGS RoHS test report (PDF)", "todo": "[待确认：报告扫描件]" }
+        ]
+      },
+      {
+        "id": "datasheets",
+        "title": "Datasheets",
+        "icon": "ic-file",
+        "items": [
+          { "label": "Datasheet — ISO 4762 / DIN 912 (PDF)", "todo": "[待确认：参数表]" },
+          { "label": "Datasheet — DIN 6921 (PDF)", "todo": "[待确认：参数表]" },
+          { "label": "Datasheet — self-tapping screws (PDF)", "todo": "[待确认：参数表]" },
+          { "label": "Datasheet — automotive 10.9 bolts (PDF)", "todo": "[待确认：参数表]" }
+        ]
+      },
+      {
+        "id": "material-certificates",
+        "title": "Material certificate (EN 10204 3.1)",
+        "icon": "ic-cert",
+        "items": [
+          { "label": "EN 10204 3.1 sample certificate, redacted (PDF)", "todo": "[待确认：样本]" }
+        ],
+        "link": { "label": "Request a 3.1 certificate for your size", "href": "/contact/?topic=3.1" }
+      }
+    ]
+  },
+  "compliance": {
+    "h2": "Compliance",
+    "items": [
+      { "q": "Are your fasteners REACH and RoHS compliant?", "a": "Yes — REACH / RoHS compliant. An SGS RoHS test report on our materials is available for download above [待确认：报告扫描件]." },
+      { "q": "Can you provide CBAM emission data?", "a": "CBAM embedded-emission data for EU importers is available on request [待确认：D13]. Ask for it with your quotation request so it travels with the order documents." },
+      { "q": "Which HS code and duty rate apply?", "a": "The HS code (heading 7318) and the duty rate applicable at your destination are confirmed on each quotation [待确认：D13]." }
+    ]
+  },
+  "ctaEnd": {
+    "title": "Need a 3.1 certificate for a specific size?",
+    "primary": { "label": "Request 3.1 Certificate", "href": "/contact/?topic=3.1" }
+  }
+}

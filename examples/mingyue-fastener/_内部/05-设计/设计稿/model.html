@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DIN912-M6x20-12.9-BO — Model page (design prototype)</title>
+<!--
+  设计稿 · 型号详情页模板（样本 1：DIN912-M6x20-12.9-BO）· 桌面 1440 / 手机 390 同一文件响应式
+  产出方：设计（b2b-ui-designer）。静态 HTML 原型，不是前端交付物。
+  依据：视觉方向单（参考站 C1 bossard BN 5264：线稿 + 属性表 + 下载 + 替代品的层级）、线框 P3-1…P3-4、文案稿 P3-a。
+  版式：左 = 尺寸线稿（d、k、dk、s、L 标注，ISO 4762 公称尺寸，设计自绘，D12）；右 = 报价条（MOQ / 交期 / FOB / 付款 + 双按钮）
+        → Tabs（Specifications 默认 / Downloads 三栏 / Alternatives）；下方 = 同类型号 4 行小表；页尾 CTA 深底；页脚。
+  Tabs：静态原型用 radio + label 的纯 CSS 切换（可点、可键盘），前端按 Kadence Tabs 实现（下划线式，当前态主色 2px）。
+  字体 / 令牌 / 图片规则同 home.html 顶部注释。
+-->
+<style>
+/* ============================================================
+   0 · 设计令牌（与 视觉系统.md 一致；前端可整段粘贴）
+   ============================================================ */
+:root{
+  /* ---------- 一层 · 原始值 primitive（无含义，只有第二层能引用） ---------- */
+  --gray-50:#F4F5F7;  --gray-100:#E9EBEE; --gray-200:#D9DCE1; --gray-300:#A9AFB7; --gray-400:#868C94;
+  --gray-500:#5B6169; --gray-600:#454A51; --gray-700:#33373D; --gray-800:#25282D; --gray-900:#1B1D21; --gray-950:#121316;
+  --blue-50:#E8EEF7;  --blue-100:#D1DCEE; --blue-200:#A9BEDC; --blue-300:#7A9AC6; --blue-400:#4C73A6;
+  --blue-500:#2C5389; --blue-600:#143A6E; --blue-700:#123565; --blue-800:#10305B; --blue-900:#0E2A52; --blue-950:#091C38;
+  --straw-50:#FBF3E3; --straw-500:#C98A1E; --straw-700:#A8700F;
+  --white:#FFFFFF; --off-white:#F5F5F5;
+  --green-50:#E6F4EA; --green-600:#1E7B3A; --green-800:#14552A;
+  --amber-50:#FFF4D6; --amber-600:#B4600E; --amber-800:#7A3F05;
+  --red-50:#FDECEC;   --red-600:#B3261E;   --red-800:#7D1A14;
+
+  --space-1:4px; --space-2:8px; --space-3:12px; --space-4:16px; --space-5:24px;
+  --space-6:32px; --space-7:48px; --space-8:64px; --space-9:96px; --space-10:128px;
+
+  --text-sm:14px; --text-base:16px; --text-md:18px; --text-lg:24px; --text-xl:32px;
+  --text-2xl:48px; --text-hero:56px; --text-3xl:64px; --text-table:15px; --text-xs:12px;
+  --leading-sm:1.5; --leading-base:1.6; --leading-lg:1.3; --leading-xl:1.2; --leading-2xl:1.15; --leading-hero:1.1; --leading-3xl:1.05;
+  --tracking-tight:-0.02em; --tracking-caps:0.08em; --tracking-table:0.02em;
+  --weight-regular:400; --weight-medium:500; --weight-semibold:600; --weight-bold:700;
+
+  --font-sans:"Manrope",system-ui,-apple-system,"Segoe UI",Roboto,Arial,Helvetica,sans-serif;
+  --font-mono:"IBM Plex Mono",ui-monospace,"SF Mono",Consolas,Menlo,monospace;
+
+  --radius-0:0; --radius-sm:2px; --radius-md:4px;
+  --shadow-0:none; --shadow-sm:0 1px 2px rgba(27,29,33,.06); --shadow-md:0 4px 12px rgba(27,29,33,.08);
+  --dur-fast:150ms; --dur-base:180ms; --dur-reveal:450ms;
+  --z-nav:100; --z-sticky:110; --z-dropdown:120;
+
+  --container-max:1240px; --grid-gap:24px; --prose-max:68ch;
+
+  /* ---------- 二层 · 语义 semantic（成对给：bg / on-bg） ---------- */
+  --color-bg:var(--white);                 --color-on-bg:var(--gray-900);
+  --color-bg-alt:var(--gray-50);           --color-on-bg-alt:var(--gray-900);
+  --color-surface:var(--white);            --color-on-surface:var(--gray-900);
+  --color-primary:var(--blue-600);         --color-on-primary:var(--white);
+  --color-primary-hover:var(--blue-700);   --color-primary-active:var(--blue-900);
+  --color-primary-soft:var(--blue-50);     --color-on-primary-soft:var(--blue-600);
+  --color-inverse:var(--blue-900);         --color-on-inverse:var(--off-white);   --color-on-inverse-muted:var(--blue-100);
+  --color-muted:var(--gray-50);            --color-on-muted:var(--gray-500);
+  --color-text-secondary:var(--gray-500);
+  --color-border:var(--gray-300);          --color-border-strong:var(--gray-400);  --color-border-subtle:var(--gray-100);
+  --color-ring:var(--blue-600);
+  --color-accent:var(--straw-500);         --color-on-accent:var(--gray-900);      --color-accent-text:var(--straw-700);
+  --color-line-art:var(--gray-300);        --color-line-art-strong:var(--gray-500); --color-line-art-fill:var(--gray-900);
+  --color-success-bg:var(--green-50);      --color-success:var(--green-600);       --color-on-success:var(--green-800);
+  --color-warning-bg:var(--amber-50);      --color-warning:var(--amber-600);       --color-on-warning:var(--amber-800);
+  --color-danger-bg:var(--red-50);         --color-danger:var(--red-600);          --color-on-danger:var(--red-800);
+  --color-info-bg:var(--blue-50);          --color-info:var(--blue-600);           --color-on-info:var(--blue-900);
+  /* 审稿标注（[待确认] 占位）专用；上线前清零，不属于品牌色板 */
+  --color-review-bg:var(--amber-50);       --color-on-review:var(--amber-800);     --color-review-border:var(--amber-600);
+
+  /* ---------- 三层 · 组件 component（只给会变的部位） ---------- */
+  --btn-h:48px; --btn-px:var(--space-6); --btn-radius:var(--radius-sm); --btn-font:var(--text-base);
+  --btn-primary-bg:var(--color-primary); --btn-primary-fg:var(--color-on-primary);
+  --btn-primary-bg-hover:var(--color-primary-hover); --btn-primary-bg-active:var(--color-primary-active);
+  --btn-secondary-border:var(--color-primary); --btn-secondary-fg:var(--color-primary); --btn-secondary-bg-hover:var(--color-primary-soft);
+  --btn-inverse-bg:var(--color-on-inverse); --btn-inverse-fg:var(--color-inverse); --btn-inverse-bg-hover:var(--blue-50);
+  --btn-disabled-opacity:.4;
+
+  --input-h:48px; --input-bg:var(--color-surface); --input-fg:var(--color-on-surface);
+  --input-border:var(--color-border-strong); --input-border-focus:var(--color-primary); --input-placeholder:var(--color-text-secondary);
+  --input-radius:var(--radius-sm); --input-error-border:var(--color-danger);
+
+  --card-bg:var(--color-surface); --card-fg:var(--color-on-surface); --card-border:var(--color-border);
+  --card-border-hover:var(--color-primary); --card-radius:var(--radius-sm); --card-pad:var(--space-5);
+
+  --badge-bg:var(--color-primary-soft); --badge-fg:var(--color-on-primary-soft);
+  --badge-accent-bg:var(--color-accent); --badge-accent-fg:var(--color-on-accent);
+
+  --table-head-bg:var(--color-primary-soft); --table-head-fg:var(--color-on-bg);
+  --table-border:var(--color-border); --table-zebra:var(--color-bg-alt); --table-row-h:42px;
+  --table-highlight:var(--color-accent); --table-row-hover:var(--color-primary-soft);
+
+  --nav-h:72px; --nav-bg:var(--color-surface); --nav-fg:var(--color-on-surface); --nav-border:var(--color-border);
+  --nav-link-active:var(--color-primary); --nav-dropdown-bg:var(--color-surface);
+
+  --form-label-fg:var(--color-on-bg); --form-help-fg:var(--color-text-secondary); --form-error-fg:var(--color-danger);
+}
+
+/* ============================================================
+   1 · 基础
+   ============================================================ */
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--color-bg);color:var(--color-on-bg);font-family:var(--font-sans);font-size:var(--text-base);line-height:var(--leading-base);font-variant-numeric:tabular-nums;}
+img,svg{display:block;max-width:100%}
+a{color:var(--color-primary);text-decoration:none}
+a:hover{text-decoration:underline;text-decoration-color:var(--color-accent);text-underline-offset:3px}
+a:focus-visible,button:focus-visible,input:focus-visible,[tabindex]:focus-visible{outline:2px solid var(--color-ring);outline-offset:2px}
+h1,h2,h3,p,ul,ol,dl,figure{margin:0}
+ul,ol{padding:0;list-style:none}
+.container{max-width:var(--container-max);margin:0 auto;padding-left:var(--space-4);padding-right:var(--space-4)}
+.mono{font-family:var(--font-mono);font-variant-numeric:tabular-nums}
+.eyebrow{font-size:var(--text-sm);font-weight:var(--weight-medium);letter-spacing:var(--tracking-caps);text-transform:uppercase;color:var(--color-text-secondary)}
+.h2{font-size:var(--text-xl);line-height:var(--leading-xl);font-weight:var(--weight-semibold);letter-spacing:var(--tracking-tight)}
+.h3{font-size:var(--text-md);line-height:var(--leading-lg);font-weight:var(--weight-semibold)}
+.lead{font-size:var(--text-md);line-height:var(--leading-base);max-width:var(--prose-max)}
+.muted{color:var(--color-text-secondary)}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+/* [待确认：…] 占位：醒目但不占品牌色 */
+.todo{display:inline-block;font-family:var(--font-mono);font-size:var(--text-xs);line-height:1.4;font-weight:var(--weight-medium);color:var(--color-on-review);background:var(--color-review-bg);border:1px dashed var(--color-review-border);border-radius:var(--radius-sm);padding:1px 6px;vertical-align:baseline;white-space:nowrap}
+.placeholder{border:1px dashed var(--color-border-strong);background:var(--color-bg-alt);color:var(--color-text-secondary);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:var(--space-2);text-align:center;font-size:var(--text-sm);padding:var(--space-4)}
+.placeholder svg{color:var(--color-line-art)}
+
+/* 螺纹节距分隔线（母题②）：等距短竖线，不用通栏实线 */
+.pitch{height:8px;width:100%;color:var(--color-line-art)}
+.section{padding-top:var(--space-7);padding-bottom:var(--space-7)}
+.section-alt{background:var(--color-bg-alt);color:var(--color-on-bg-alt)}
+.section-head{display:flex;flex-direction:column;gap:var(--space-2);margin-bottom:var(--space-6)}
+
+/* ============================================================
+   2 · 组件
+   ============================================================ */
+/* 按钮（三级）：主 / 次 / 文字箭头；六态见 组件规范.md */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:var(--space-2);min-height:var(--btn-h);padding:0 var(--btn-px);border-radius:var(--btn-radius);font:inherit;font-size:var(--btn-font);font-weight:var(--weight-semibold);line-height:1;border:1px solid transparent;cursor:pointer;text-decoration:none;transition:background-color var(--dur-base),border-color var(--dur-base),transform var(--dur-fast);white-space:nowrap}
+.btn:hover{text-decoration:none}
+.btn-primary{background:var(--btn-primary-bg);color:var(--btn-primary-fg);border-color:var(--btn-primary-bg)}
+.btn-primary:hover{background:var(--btn-primary-bg-hover);border-color:var(--btn-primary-bg-hover)}
+.btn-primary:active{background:var(--btn-primary-bg-active);border-color:var(--btn-primary-bg-active);transform:translateY(1px)}
+.btn-secondary{background:transparent;color:var(--btn-secondary-fg);border-color:var(--btn-secondary-border)}
+.btn-secondary:hover{background:var(--btn-secondary-bg-hover)}
+.btn-secondary:active{background:var(--color-primary-soft);transform:translateY(1px)}
+.btn-inverse{background:var(--btn-inverse-bg);color:var(--btn-inverse-fg);border-color:var(--btn-inverse-bg)}
+.btn-inverse:hover{background:var(--btn-inverse-bg-hover);border-color:var(--btn-inverse-bg-hover)}
+.btn-inverse:active{transform:translateY(1px)}
+.btn[aria-disabled="true"],.btn:disabled{opacity:var(--btn-disabled-opacity);cursor:not-allowed;pointer-events:none}
+.btn-link{display:inline-flex;align-items:center;gap:var(--space-2);font-weight:var(--weight-semibold);color:var(--color-primary)}
+.btn-link svg{width:16px;height:16px;transition:transform var(--dur-fast)}
+.btn-link:hover svg{transform:translateX(2px)}
+
+/* 输入框 */
+.input{height:var(--input-h);width:100%;padding:0 var(--space-4);font:inherit;font-size:var(--text-base);color:var(--input-fg);background:var(--input-bg);border:1px solid var(--input-border);border-radius:var(--input-radius);transition:border-color var(--dur-base)}
+.input::placeholder{color:var(--input-placeholder)}
+.input:hover{border-color:var(--color-on-bg)}
+.input:focus{outline:none;border-color:var(--input-border-focus);box-shadow:0 0 0 2px var(--color-primary-soft)}
+.input.mono{font-family:var(--font-mono);font-size:var(--text-sm)}
+
+/* 卡片 */
+.card{display:block;background:var(--card-bg);color:var(--card-fg);border:1px solid var(--card-border);border-radius:var(--card-radius);padding:var(--card-pad);transition:transform var(--dur-base),border-color var(--dur-base);text-decoration:none}
+a.card:hover{transform:translateY(-2px);border-color:var(--card-border-hover);text-decoration:none}
+a.card:active{transform:translateY(0)}
+
+/* 徽章 / 标签 */
+.badge{display:inline-block;font-size:var(--text-xs);line-height:1;font-weight:var(--weight-semibold);letter-spacing:var(--tracking-caps);text-transform:uppercase;padding:5px 8px;border-radius:var(--radius-sm);background:var(--badge-bg);color:var(--badge-fg)}
+.badge-accent{background:var(--badge-accent-bg);color:var(--badge-accent-fg)}
+
+/* 参数表 */
+.spec{width:100%;border-collapse:collapse;font-size:var(--text-table);font-variant-numeric:tabular-nums}
+.spec th,.spec td{text-align:left;padding:0 var(--space-3);height:var(--table-row-h);border-bottom:1px solid var(--table-border);vertical-align:middle}
+.spec thead th{background:var(--table-head-bg);color:var(--table-head-fg);font-size:var(--text-sm);font-weight:var(--weight-semibold);letter-spacing:var(--tracking-table)}
+.spec tbody tr:nth-child(even) td,.spec tbody tr:nth-child(even) th{background:var(--table-zebra)}
+.spec tbody th{font-weight:var(--weight-medium);color:var(--color-text-secondary);width:44%;white-space:nowrap}
+.spec th.num{text-align:right}
+.spec td.val{font-family:var(--font-mono);font-weight:var(--weight-medium);text-align:right;white-space:nowrap}
+.spec td.unit{font-family:var(--font-mono);color:var(--color-text-secondary);width:56px;padding-left:0}
+.spec tr.is-highlight th{box-shadow:inset 2px 0 0 var(--table-highlight)}
+
+/* ============================================================
+   3 · 导航
+   ============================================================ */
+.nav{position:sticky;top:0;z-index:var(--z-nav);background:var(--nav-bg);color:var(--nav-fg);border-bottom:1px solid var(--nav-border)}
+.nav .container{display:flex;align-items:center;gap:var(--space-5);height:var(--nav-h)}
+.logo{display:flex;flex-direction:column;gap:2px;color:var(--color-on-bg);text-decoration:none;flex:none}
+.logo:hover{text-decoration:none}
+.logo .wordmark{font-weight:var(--weight-bold);font-size:var(--text-md);letter-spacing:0.06em;line-height:1}
+.logo .tagline{font-size:10px;letter-spacing:var(--tracking-caps);text-transform:uppercase;color:var(--color-text-secondary);line-height:1}
+.nav-menu{display:none;align-items:center;gap:var(--space-5);margin-left:var(--space-3);flex:1}
+.nav-menu>li{position:relative}
+.nav-menu>li>a{display:inline-flex;align-items:center;gap:var(--space-1);height:var(--nav-h);white-space:nowrap;color:var(--color-on-bg);font-weight:var(--weight-medium);font-size:var(--text-sm);border-bottom:2px solid transparent}
+.nav-menu>li>a:hover{text-decoration:none;color:var(--nav-link-active)}
+.nav-menu>li>a[aria-current="page"]{color:var(--nav-link-active);border-bottom-color:var(--nav-link-active)}
+.nav-menu>li>a svg{width:12px;height:12px}
+/* Products 下拉：多列文字分组，真实 DOM，悬停 / 聚焦打开（静态原型用 CSS :hover / :focus-within） */
+.dropdown{position:absolute;top:100%;left:calc(-1 * var(--space-5));z-index:var(--z-dropdown);display:none;grid-template-columns:repeat(3,auto);gap:var(--space-7);min-width:720px;padding:var(--space-5) var(--space-6);background:var(--nav-dropdown-bg);border:1px solid var(--nav-border);border-top:0;box-shadow:var(--shadow-md)}
+.nav-menu>li:hover .dropdown,.nav-menu>li:focus-within .dropdown{display:grid}
+.dropdown .eyebrow{margin-bottom:var(--space-3)}
+.dropdown li{margin-bottom:var(--space-2)}
+.dropdown a{color:var(--color-on-bg);font-size:var(--text-sm)}
+.dropdown a .mono{display:block;color:var(--color-text-secondary);font-size:var(--text-xs);margin-top:2px}
+.nav-tools{display:none;align-items:center;gap:var(--space-3);margin-left:auto}
+.nav-tools .input{width:160px;height:40px}
+.nav-tools .btn{min-height:40px;padding:0 var(--space-5)}
+.nav-burger{margin-left:auto;display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;background:none;border:1px solid var(--color-border);border-radius:var(--radius-sm);color:var(--color-on-bg);cursor:pointer}
+.nav-burger svg{width:22px;height:22px}
+
+/* 手机底部粘性询盘条（≥1024 隐藏） */
+.sticky-bar{position:fixed;left:0;right:0;bottom:0;z-index:var(--z-sticky);height:56px;padding:var(--space-1) var(--space-4);background:var(--color-surface);border-top:1px solid var(--color-border);display:flex;align-items:center}
+.sticky-bar .btn{width:100%}
+body{padding-bottom:56px}
+
+/* ============================================================
+   4 · 型号页区块
+   ============================================================ */
+.crumbs{font-size:var(--text-sm);color:var(--color-text-secondary);padding:var(--space-4) 0;display:flex;flex-wrap:wrap;gap:var(--space-2)}
+.crumbs a{color:var(--color-text-secondary)}
+.crumbs span[aria-hidden]{color:var(--color-border)}
+.crumbs .current{color:var(--color-on-bg);font-family:var(--font-mono)}
+
+.product-head{padding-bottom:var(--space-6)}
+.product-head h1{font-size:var(--text-xl);line-height:var(--leading-xl);font-weight:var(--weight-bold);letter-spacing:var(--tracking-tight);max-width:30ch}
+.product-head .model{display:inline-flex;align-items:center;gap:var(--space-2);margin-top:var(--space-3);font-family:var(--font-mono);font-weight:var(--weight-semibold);font-size:var(--text-md);padding:6px 10px;background:var(--badge-bg);color:var(--badge-fg);border-radius:var(--radius-sm)}
+
+.product{display:grid;grid-template-columns:minmax(0,1fr);gap:var(--space-6);padding-bottom:var(--space-7)}
+.product>*{min-width:0}
+/* 左：线稿图纸位 */
+.drawing-panel{border:1px solid var(--card-border);border-radius:var(--card-radius);background:var(--card-bg);overflow:hidden}
+.drawing-panel .head{display:flex;justify-content:space-between;align-items:center;padding:var(--space-3) var(--space-4);border-bottom:1px solid var(--table-border);font-size:var(--text-sm)}
+.drawing-panel .head .eyebrow{font-size:var(--text-xs)}
+.drawing-panel .art{padding:var(--space-6) var(--space-4);color:var(--color-line-art)}
+.drawing-panel .art text{font-family:var(--font-mono);font-size:11px;fill:var(--color-line-art-strong)}
+.drawing-panel .dims{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--table-border)}
+.drawing-panel .dims div{padding:var(--space-3) var(--space-3);min-width:0;border-right:1px solid var(--table-border);font-size:var(--text-sm)}
+.drawing-panel .dims div:last-child{border-right:0}
+.drawing-panel .dims .k{display:block;color:var(--color-text-secondary);font-size:var(--text-xs);letter-spacing:var(--tracking-caps);text-transform:uppercase}
+.drawing-panel .dims .v{font-family:var(--font-mono);font-weight:var(--weight-semibold)}
+.drawing-panel .foot{padding:var(--space-3) var(--space-4);font-size:var(--text-xs);color:var(--color-text-secondary);border-top:1px solid var(--table-border)}
+
+/* 右：报价条 + Tabs */
+.quote-strip{border:1px solid var(--card-border);border-radius:var(--card-radius);padding:var(--space-5);display:grid;gap:var(--space-4);background:var(--color-bg-alt)}
+.quote-strip dl{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--space-3) var(--space-4);font-size:var(--text-sm)}
+.quote-strip dt{color:var(--color-text-secondary);font-size:var(--text-xs);letter-spacing:var(--tracking-caps);text-transform:uppercase;font-weight:var(--weight-medium)}
+.quote-strip dd{margin:0;font-family:var(--font-mono);font-weight:var(--weight-medium)}
+.quote-strip .actions{display:flex;flex-direction:column;gap:var(--space-3)}
+.quote-strip .actions .btn{width:100%}
+
+.tabs{margin-top:var(--space-6);position:relative}
+.tabs>input{position:absolute;opacity:0;width:1px;height:1px;pointer-events:none}
+.tablist{display:flex;gap:var(--space-5);border-bottom:1px solid var(--color-border);overflow-x:auto}
+.tablist label{display:inline-flex;align-items:center;height:48px;padding:0 var(--space-1);font-weight:var(--weight-semibold);font-size:var(--text-base);color:var(--color-text-secondary);border-bottom:2px solid transparent;margin-bottom:-1px;cursor:pointer;white-space:nowrap;transition:color var(--dur-base)}
+.tablist label:hover{color:var(--color-on-bg)}
+.panels>.panel{display:none;padding-top:var(--space-5)}
+#tab-spec:checked~.tablist label[for="tab-spec"],#tab-dl:checked~.tablist label[for="tab-dl"],#tab-alt:checked~.tablist label[for="tab-alt"]{color:var(--color-primary);border-bottom-color:var(--color-primary)}
+#tab-spec:checked~.panels .panel-spec,#tab-dl:checked~.panels .panel-dl,#tab-alt:checked~.panels .panel-alt{display:block}
+#tab-spec:focus-visible~.tablist label[for="tab-spec"],#tab-dl:focus-visible~.tablist label[for="tab-dl"],#tab-alt:focus-visible~.tablist label[for="tab-alt"]{outline:2px solid var(--color-ring);outline-offset:-2px}
+
+/* 参数表（手机横滚、首列固定） */
+.table-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.table-scroll .spec{min-width:100%}
+.table-scroll .spec th[scope="row"],.table-scroll .spec tbody td:first-child{position:sticky;left:0;background:var(--color-surface);z-index:1}
+.table-scroll .spec tbody tr:nth-child(even) th[scope="row"],.table-scroll .spec tbody tr:nth-child(even) td:first-child{background:var(--table-zebra)}
+.spec td.val.left{text-align:left}
+.spec td.note{color:var(--color-text-secondary);font-size:var(--text-sm)}
+.spec td .note{white-space:normal;font-family:var(--font-sans);font-weight:var(--weight-regular)}
+
+/* Downloads 三栏 */
+.dl-grid{display:grid;grid-template-columns:1fr;gap:var(--space-4)}
+.dl-col{border:1px solid var(--card-border);border-radius:var(--card-radius);padding:var(--space-4)}
+.dl-col .h3{display:flex;align-items:center;gap:var(--space-2);margin-bottom:var(--space-3)}
+.dl-col .h3 svg{width:20px;height:20px;color:var(--color-line-art-strong)}
+.dl-col li{display:flex;justify-content:space-between;gap:var(--space-3);padding:var(--space-2) 0;border-top:1px solid var(--color-border-subtle);font-size:var(--text-sm)}
+.dl-col li:first-of-type{border-top:0}
+.dl-col li .meta{font-family:var(--font-mono);color:var(--color-text-secondary);white-space:nowrap}
+.dl-note{margin-top:var(--space-4);font-size:var(--text-sm);color:var(--color-text-secondary)}
+
+/* 相关型号 */
+.related{padding-top:var(--space-7);padding-bottom:var(--space-7);border-top:1px solid var(--color-border-subtle)}
+.related .section-head{flex-direction:row;justify-content:space-between;align-items:baseline;flex-wrap:wrap}
+.spec td.model a{font-family:var(--font-mono);font-weight:var(--weight-medium);color:var(--color-primary)}
+
+/* 页尾 CTA + 页脚（同首页 H7 / 页脚） */
+.cta-end{background:var(--color-inverse);color:var(--color-on-inverse);padding-top:var(--space-8);padding-bottom:var(--space-8)}
+.cta-end .h2{font-size:var(--text-xl);font-weight:var(--weight-bold);color:var(--color-on-inverse)}
+.cta-end .h2 .mono{font-weight:var(--weight-semibold)}
+.cta-end p{margin-top:var(--space-4);font-size:17px;line-height:1.7;font-weight:var(--weight-medium);letter-spacing:0.01em;max-width:var(--prose-max);color:var(--color-on-inverse)}
+.cta-end .actions{margin-top:var(--space-6);display:flex;flex-direction:column;gap:var(--space-3);align-items:flex-start}
+.cta-end .actions small{font-size:var(--text-sm);color:var(--color-on-inverse-muted)}
+.cta-end .actions small a{color:var(--color-on-inverse);text-decoration:underline;text-underline-offset:3px}
+.footer{border-top:1px solid var(--color-border);padding-top:var(--space-7);padding-bottom:var(--space-7);font-size:var(--text-sm)}
+.footer .cols{display:grid;grid-template-columns:1fr;gap:var(--space-6)}
+.footer .eyebrow{margin-bottom:var(--space-3)}
+.footer li{margin-bottom:var(--space-2)}
+.footer a{color:var(--color-on-bg)}
+.footer address{font-style:normal;line-height:var(--leading-base)}
+.footer .logo .wordmark{font-size:var(--text-lg)}
+.footer .bottom{margin-top:var(--space-7);padding-top:var(--space-5);border-top:1px solid var(--color-border-subtle);display:flex;flex-direction:column;gap:var(--space-2);color:var(--color-text-secondary)}
+
+/* ============================================================
+   5 · 断点：640 / 1024 / 1280（手机优先）
+   ============================================================ */
+@media (min-width:640px){
+  .container{padding-left:var(--space-6);padding-right:var(--space-6)}
+  .product-head h1{font-size:var(--text-2xl);line-height:var(--leading-2xl)}
+  .quote-strip dl{grid-template-columns:repeat(4,minmax(0,auto));justify-content:start;column-gap:var(--space-6)}
+  .quote-strip .actions{flex-direction:row;flex-wrap:wrap}
+  .quote-strip .actions .btn{width:auto}
+  .dl-grid{grid-template-columns:repeat(3,1fr)}
+  .footer .cols{grid-template-columns:repeat(2,1fr)}
+}
+@media (min-width:1024px){
+  .container{padding-left:var(--space-7);padding-right:var(--space-7)}
+  .nav-menu,.nav-tools{display:flex}
+  .nav-burger,.sticky-bar{display:none}
+  body{padding-bottom:0}
+  .product{grid-template-columns:5fr 7fr;gap:var(--space-8);align-items:start;padding-bottom:var(--space-9)}
+  .drawing-panel{position:sticky;top:calc(var(--nav-h) + var(--space-5))}
+  .related{padding-top:var(--space-9);padding-bottom:var(--space-9)}
+  .cta-end .h2{font-size:var(--text-2xl);line-height:var(--leading-2xl);max-width:24ch}
+  .footer .cols{grid-template-columns:2fr 1fr 1fr 1fr}
+  .footer .bottom{flex-direction:row;justify-content:space-between}
+}
+@media (prefers-reduced-motion:reduce){
+  *{transition:none !important}
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <pattern id="pitch" width="8" height="8" patternUnits="userSpaceOnUse">
+      <line x1="0.75" y1="0" x2="0.75" y2="8" stroke="currentColor" stroke-width="1.5"/>
+    </pattern>
+    <symbol id="hex-socket" viewBox="0 0 48 48">
+      <circle cx="24" cy="24" r="20" fill="none" stroke="currentColor" stroke-width="1.5"/>
+      <polygon points="24,12.5 33.96,18.25 33.96,29.75 24,35.5 14.04,29.75 14.04,18.25" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+    </symbol>
+  </defs>
+</svg>
+
+<!-- ================= G-1 导航（同首页；Products 当前态） ================= -->
+<header class="nav">
+  <div class="container">
+    <a class="logo" href="/" aria-label="Mingyue Fastener Co., Ltd.">
+      <span class="wordmark">MINGYUE FASTENER</span>
+      <span class="tagline">Precision since 2009</span>
+      <span class="todo">[待确认：logo 源文件]</span>
+    </a>
+    <ul class="nav-menu">
+      <li>
+        <a href="/products/" aria-haspopup="true" aria-current="page">Products <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 4l4 4 4-4"/></svg></a>
+        <div class="dropdown">
+          <div>
+            <div class="eyebrow">By standard</div>
+            <ul>
+              <li><a href="/products/socket-head-cap-screws-iso-4762-din-912/">Hexagon Socket Head Cap Screws<span class="mono">ISO 4762 / DIN 912</span></a></li>
+              <li><a href="/products/hexagon-flange-bolts-din-6921/">Hexagon Flange Bolts<span class="mono">DIN 6921</span></a></li>
+              <li><a href="/products/self-tapping-screws/">Self-Tapping Screws<span class="mono"><span class="todo">[待确认：标准号]</span></span></a></li>
+              <li><a href="/products/automotive-high-strength-bolts-10-9/">Automotive High-Strength Bolts<span class="mono">Property class 10.9</span></a></li>
+            </ul>
+          </div>
+          <div>
+            <div class="eyebrow">To your drawing</div>
+            <ul><li><a href="/custom-cold-formed-parts/">Custom Cold-Formed Parts<span class="mono">STEP / PDF</span></a></li></ul>
+          </div>
+          <div>
+            <div class="eyebrow">All</div>
+            <ul><li><a href="/products/">Browse all sizes →</a></li></ul>
+          </div>
+        </div>
+      </li>
+      <li><a href="/custom-cold-formed-parts/">Custom Cold-Formed Parts</a></li>
+      <li><a href="/quality-downloads/">Quality &amp; Downloads</a></li>
+      <li><a href="/about/">About Us</a></li>
+      <li><a href="/faq/">FAQ</a></li>
+      <li><a href="/contact/">Contact</a></li>
+    </ul>
+    <form class="nav-tools" action="/products/" role="search">
+      <label class="sr-only" for="q">Search by model string or standard</label>
+      <input class="input mono" id="q" name="s" type="search" placeholder="DIN912-M6x20" aria-label="Search by model string or standard">
+      <a class="btn btn-primary" href="/contact/?model=DIN912-M6x20-12.9-BO">Request a Quote</a>
+    </form>
+    <button class="nav-burger" type="button" aria-label="Open menu" aria-expanded="false">
+      <svg viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 5h18M2 11h18M2 17h18"/></svg>
+    </button>
+  </div>
+</header>
+
+<main class="container">
+
+  <!-- P3-1 面包屑 + H1 + 型号串 -->
+  <nav class="crumbs" aria-label="Breadcrumb">
+    <a href="/">Home</a><span aria-hidden="true">›</span>
+    <a href="/products/">Products</a><span aria-hidden="true">›</span>
+    <a href="/products/socket-head-cap-screws-iso-4762-din-912/">Hexagon Socket Head Cap Screws ISO 4762 / DIN 912</a><span aria-hidden="true">›</span>
+    <span class="current">DIN912-M6x20-12.9-BO</span>
+  </nav>
+  <header class="product-head">
+    <span class="eyebrow">Hexagon socket head cap screw</span>
+    <h1 style="margin-top:var(--space-2)">ISO 4762 / DIN 912 M6×20 Property Class 12.9 Black Oxide</h1>
+    <span class="model">DIN912-M6x20-12.9-BO</span>
+  </header>
+
+  <!-- P3-2 / P3-3 -->
+  <div class="product">
+    <!-- 左：尺寸线稿（d、k、dk、s、L；ISO 4762 公称尺寸，设计自绘，L3 示意；Downloads 里的 Drawing (SVG) 即此图） -->
+    <figure class="drawing-panel">
+      <div class="head">
+        <span class="eyebrow">Drawing · ISO 4762</span>
+        <span class="mono muted">1 : 1 nominal</span>
+      </div>
+      <svg class="art" viewBox="0 0 480 260" role="img" aria-labelledby="t-draw">
+        <title id="t-draw">DIN912-M6x20-12.9-BO</title>
+        <desc>Dimensioned line drawing of ISO 4762 / DIN 912 M6×20 socket head cap screw: d, k, dk, s</desc>
+        <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round">
+          <!-- 侧视：头 k×dk、沉孔隐藏线、杆 d×L、倒角、螺纹 -->
+          <rect x="60" y="60" width="60" height="100"/>
+          <path d="M60 85 H90 V135 H60" stroke-dasharray="4 3" stroke-width="1"/>
+          <path d="M120 80 H314 L320 86 V134 L314 140 H120"/>
+          <path d="M130 82 L126 138 M140 82 L136 138 M150 82 L146 138 M160 82 L156 138 M170 82 L166 138 M180 82 L176 138 M190 82 L186 138 M200 82 L196 138 M210 82 L206 138 M220 82 L216 138 M230 82 L226 138 M240 82 L236 138 M250 82 L246 138 M260 82 L256 138 M270 82 L266 138 M280 82 L276 138 M290 82 L286 138 M300 82 L296 138 M310 82 L306 138" stroke-width="1"/>
+          <!-- 中心线 -->
+          <path d="M40 110 H340" stroke-dasharray="12 4 2 4" stroke-width="1"/>
+          <!-- 端视 -->
+          <circle cx="410" cy="110" r="50"/>
+          <polygon points="410,85 431.65,97.5 431.65,122.5 410,135 388.35,122.5 388.35,97.5"/>
+          <path d="M410 50 V170 M350 110 H470" stroke-dasharray="12 4 2 4" stroke-width="1"/>
+        </g>
+        <!-- 尺寸线：dk / k / d / L / s / t -->
+        <g fill="none" stroke="currentColor" stroke-width="1">
+          <path d="M36 60 V160 M32 60 H60 M32 160 H60"/>
+          <path d="M60 184 V160 M120 184 V160 M60 180 H120"/>
+          <path d="M338 80 H320 M338 140 H320 M334 80 V140"/>
+          <path d="M120 206 V146 M320 206 V146 M120 202 H320"/>
+          <path d="M388.35 182 V122.5 M431.65 182 V122.5 M388.35 178 H431.65"/>
+          <path d="M60 44 V60 M90 44 V85 M60 48 H90"/>
+        </g>
+        <g>
+          <text x="18" y="114">dk</text>
+          <text x="86" y="194">k</text>
+          <text x="341" y="114">d</text>
+          <text x="214" y="216">L</text>
+          <text x="406" y="195">s</text>
+          <text x="71" y="40">t</text>
+        </g>
+      </svg>
+      <div class="dims" aria-label="Nominal dimensions to ISO 4762">
+        <div><span class="k">d</span><span class="v">M6</span></div>
+        <div><span class="k">dk</span><span class="v">10 mm</span></div>
+        <div><span class="k">k</span><span class="v">6 mm</span></div>
+        <div><span class="k">s</span><span class="v">5 mm</span></div>
+      </div>
+      <figcaption class="foot">Nominal dimensions to ISO 4762 · L = 20 mm · t min. 3 mm · Illustration, not a production drawing</figcaption>
+    </figure>
+
+    <!-- 右：报价条 + Tabs -->
+    <div>
+      <div class="quote-strip">
+        <dl>
+          <div><dt>MOQ</dt><dd>50,000 pcs / size</dd></div>
+          <div><dt>Lead time</dt><dd>20–25 days</dd></div>
+          <div><dt>Terms</dt><dd>FOB Ningbo</dd></div>
+          <div><dt>Payment</dt><dd>T/T 30% · 70% vs B/L</dd></div>
+        </dl>
+        <div class="actions">
+          <a class="btn btn-primary" href="/contact/?model=DIN912-M6x20-12.9-BO">Request a Quote</a>
+          <a class="btn btn-secondary" href="/contact/?model=DIN912-M6x20-12.9-BO&amp;topic=3.1">Request 3.1 Certificate</a>
+        </div>
+      </div>
+
+      <div class="tabs">
+        <input type="radio" name="tabs" id="tab-spec" checked>
+        <input type="radio" name="tabs" id="tab-dl">
+        <input type="radio" name="tabs" id="tab-alt">
+        <div class="tablist" role="tablist">
+          <label for="tab-spec" role="tab">Specifications</label>
+          <label for="tab-dl" role="tab">Downloads</label>
+          <label for="tab-alt" role="tab">Alternatives</label>
+        </div>
+        <div class="panels">
+          <!-- Tab 1 · Specifications（默认；10 行固定字段；单位独立列；数值 tabular） -->
+          <div class="panel panel-spec" role="tabpanel">
+            <div class="table-scroll">
+              <table class="spec">
+                <thead><tr><th scope="col">Property</th><th scope="col">Value</th><th scope="col">Unit</th></tr></thead>
+                <tbody>
+                  <tr><th scope="row">Standard</th><td class="val left">ISO 4762 / DIN 912</td><td class="unit">—</td></tr>
+                  <tr><th scope="row">Thread</th><td class="val left">M6, coarse pitch</td><td class="unit">—</td></tr>
+                  <tr><th scope="row">Length</th><td class="val left">20</td><td class="unit">mm</td></tr>
+                  <tr class="is-highlight"><th scope="row">Property class</th><td class="val left">12.9 (ISO 898-1)</td><td class="unit">—</td></tr>
+                  <tr><th scope="row">Material</th><td class="val left">Alloy steel <span class="todo">[待确认：材料牌号，D18]</span></td><td class="unit">—</td></tr>
+                  <tr><th scope="row">Surface</th><td class="val left">Black oxide</td><td class="unit">—</td></tr>
+                  <tr><th scope="row">Tolerance</th><td class="val left">6g</td><td class="unit">—</td></tr>
+                  <tr><th scope="row">Tensile strength</th><td class="val left">≥ 1,220</td><td class="unit">MPa</td></tr>
+                  <tr><th scope="row">Salt spray</th><td class="val left">— <span class="note">(black oxide, not a corrosion-protective finish)</span></td><td class="unit">h</td></tr>
+                  <tr><th scope="row">Inch reference</th><td class="val left">M6 ≈ 0.236 · 20 mm ≈ 0.787</td><td class="unit">in</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="dl-note">MOQ 50,000 pcs per size · Lead time 20–25 days · FOB Ningbo · T/T 30% deposit, 70% against B/L copy</p>
+          </div>
+
+          <!-- Tab 2 · Downloads（三栏：Datasheet / Drawing / Certificates；未到显示占位不放坏链） -->
+          <div class="panel panel-dl" role="tabpanel">
+            <div class="dl-grid">
+              <div class="dl-col">
+                <div class="h3"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 2h7l4 4v12H5z M12 2v4h4 M7 11h6M7 14h6"/></svg>Datasheet</div>
+                <ul>
+                  <li><span>Datasheet (PDF)</span><span class="meta">PDF coming</span></li>
+                  <li><span class="todo">[待确认：参数表 Excel 未到]</span></li>
+                </ul>
+              </div>
+              <div class="dl-col">
+                <div class="h3"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 4h14v12H3z M3 10h14 M8 4v12"/></svg>Drawing</div>
+                <ul>
+                  <li><a href="#t-draw">Drawing (SVG)</a><span class="meta">SVG · 6 KB</span></li>
+                  <li><span class="muted">Dimensions d, k, dk, s to ISO 4762</span></li>
+                </ul>
+              </div>
+              <div class="dl-col">
+                <div class="h3"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M10 2l2.5 2.5H16v3.5L18 10l-2 2v3.5h-3.5L10 18l-2.5-2.5H4V12l-2-2 2-2V4.5h3.5z"/></svg>Certificates</div>
+                <ul>
+                  <li><span>ISO 9001:2015 (PDF)</span><span class="meta">PDF coming</span></li>
+                  <li><span>IATF 16949 (PDF)</span><span class="meta">PDF coming</span></li>
+                  <li><span class="todo">[待确认：证书扫描件]</span></li>
+                </ul>
+              </div>
+            </div>
+            <p class="dl-note">EN 10204 3.1 certificate: request per order with the button above.</p>
+          </div>
+
+          <!-- Tab 3 · Alternatives（同规格换表面处理 / 等级，≤ 4 项） -->
+          <div class="panel panel-alt" role="tabpanel">
+            <p style="max-width:var(--prose-max)">Same size in other finishes or classes: <span class="todo">[待确认：同规格替代型号，D18]</span>. Request a Quote and state the finish you need; zinc plating and zinc flake on this size are quoted on request <span class="todo">[待确认：是否提供，D20]</span>.</p>
+            <div class="table-scroll" style="margin-top:var(--space-4)">
+              <table class="spec">
+                <thead><tr><th scope="col">Model</th><th scope="col">Surface</th><th scope="col" class="num">Class</th><th scope="col">Status</th></tr></thead>
+                <tbody>
+                  <tr><td class="model"><span class="mono">DIN912-M6x20-12.9-ZP</span></td><td>Zinc plating</td><td class="val">12.9</td><td class="note"><span class="todo">[待确认：是否提供，D20]</span></td></tr>
+                  <tr><td class="model"><span class="mono">DIN912-M6x20-12.9-ZF</span></td><td>Zinc flake</td><td class="val">12.9</td><td class="note"><span class="todo">[待确认：是否提供，D20]</span></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <svg class="pitch" aria-hidden="true"><rect width="100%" height="8" fill="url(#pitch)"/></svg>
+
+  <!-- P3-4 相关型号：4 行小表 + Browse all sizes -->
+  <section class="related" id="related">
+    <div class="section-head">
+      <h2 class="h2">More sizes in this class</h2>
+      <a class="btn-link" href="/products/?category=socket-head-cap-screws-iso-4762-din-912">Browse all sizes <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+    </div>
+    <div class="table-scroll">
+      <table class="spec">
+        <thead><tr><th scope="col">Model</th><th scope="col" class="num">Thread × length</th><th scope="col" class="num">Class</th><th scope="col">Surface</th><th scope="col">Availability</th></tr></thead>
+        <tbody>
+          <tr><td class="model"><a href="/products/din912-m6x16-12-9-bo/">DIN912-M6x16-12.9-BO</a></td><td class="val">M6 × 16</td><td class="val">12.9</td><td>Black oxide</td><td class="note"><span class="todo">[待确认：D18 同类型号]</span></td></tr>
+          <tr><td class="model"><a href="/products/din912-m6x25-12-9-bo/">DIN912-M6x25-12.9-BO</a></td><td class="val">M6 × 25</td><td class="val">12.9</td><td>Black oxide</td><td class="note"><span class="todo">[待确认：D18 同类型号]</span></td></tr>
+          <tr><td class="model"><a href="/products/din912-m8x20-12-9-bo/">DIN912-M8x20-12.9-BO</a></td><td class="val">M8 × 20</td><td class="val">12.9</td><td>Black oxide</td><td class="note"><span class="todo">[待确认：D18 同类型号]</span></td></tr>
+          <tr><td class="model"><a href="/products/din912-m8x30-12-9-bo/">DIN912-M8x30-12.9-BO</a></td><td class="val">M8 × 30</td><td class="val">12.9</td><td>Black oxide</td><td class="note"><span class="todo">[待确认：D18 同类型号]</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+</main>
+
+<!-- 页尾 CTA（深底；与 P3-2 之间隔 P3-3、P3-4；文案沿用首页 H7，型号预填） -->
+<section class="cta-end" id="cta-end">
+  <div class="container">
+    <h2 class="h2"><span class="mono">Standard, size, class</span> — that's all we need to quote</h2>
+    <p>Add your annual quantity and target market, and we quote FOB Ningbo with lead time and MOQ.</p>
+    <div class="actions">
+      <a class="btn btn-inverse" href="/contact/?model=DIN912-M6x20-12.9-BO">Request a Quote</a>
+      <small>or email <a href="mailto:sales@mingyue-fastener.com">sales@mingyue-fastener.com</a></small>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="cols">
+      <div>
+        <a class="logo" href="/" aria-label="Mingyue Fastener Co., Ltd." style="margin-bottom:var(--space-4)">
+          <span class="wordmark">MINGYUE FASTENER</span>
+          <span class="tagline">Precision since 2009</span>
+          <span class="todo">[待确认：logo 源文件]</span>
+        </a>
+        <div class="eyebrow">Contact</div>
+        <address>
+          Mingyue Fastener Co., Ltd.<br>
+          No. 88 Muyu Road, Zeguo Industrial Zone,<br>Wenling, Taizhou, Zhejiang, China<br>
+          <a href="mailto:sales@mingyue-fastener.com">sales@mingyue-fastener.com</a><br>
+          Tel. <span class="todo">[待确认：固定电话]</span>
+        </address>
+      </div>
+      <div>
+        <div class="eyebrow">Products</div>
+        <ul>
+          <li><a href="/products/socket-head-cap-screws-iso-4762-din-912/">Socket Head Cap Screws ISO 4762 / DIN 912</a></li>
+          <li><a href="/products/hexagon-flange-bolts-din-6921/">Hexagon Flange Bolts DIN 6921</a></li>
+          <li><a href="/products/self-tapping-screws/">Self-Tapping Screws</a></li>
+          <li><a href="/products/automotive-high-strength-bolts-10-9/">Automotive High-Strength Bolts 10.9</a></li>
+          <li><a href="/custom-cold-formed-parts/">Custom Cold-Formed Parts</a></li>
+          <li><a href="/products/">All Products</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="eyebrow">Company</div>
+        <ul>
+          <li><a href="/about/">About Us</a></li>
+          <li><a href="/quality-downloads/">Quality &amp; Downloads</a></li>
+          <li><a href="/about/news/">News &amp; Trade Fairs</a></li>
+          <li><a href="/faq/">FAQ</a></li>
+          <li><a href="/contact/">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="eyebrow">Legal</div>
+        <ul>
+          <li><a href="/privacy/">Privacy Policy</a></li>
+          <li><a href="/imprint/">Imprint</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="bottom">
+      <span>ISO 9001:2015 · IATF 16949 · RoHS compliant, SGS report <span class="todo">[待确认：证书扫描件]</span></span>
+      <span>© 2026 Mingyue Fastener Co., Ltd. · MINGYUE FASTENER · PRECISION SINCE 2009</span>
+    </div>
+  </div>
+</footer>
+
+<!-- G-2 手机底部粘性询盘条（型号预填） -->
+<div class="sticky-bar">
+  <a class="btn btn-primary" href="/contact/?model=DIN912-M6x20-12.9-BO">Request a Quote</a>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,88 @@
+{
+  "hero": {
+    "h1": "Cold-Formed Fasteners, Hardened In-House",
+    "sub": "DIN / ISO fasteners and parts to your drawing, for distributors and Tier-2 suppliers. Automotive parts 100% optically sorted in-house, IATF 16949 [待确认：证书扫描件], 15-day samples.",
+    "primary": { "label": "Request a Quote", "href": "/contact/" },
+    "secondary": { "label": "Browse Products", "href": "/products/" },
+    "specCard": {
+      "model": "DIN912-M6x20-12.9-BO",
+      "badge": "Representative size",
+      "drawingAlt": "Line drawing of ISO 4762 / DIN 912 M6×20 socket head cap screw, property class 12.9, black oxide",
+      "rows": [
+        { "k": "Standard", "v": "ISO 4762 / DIN 912" },
+        { "k": "Thread", "v": "M6 × 20 mm" },
+        { "k": "Property class", "v": "12.9", "highlight": true },
+        { "k": "Surface", "v": "Black oxide" },
+        { "k": "Tolerance", "v": "6g" },
+        { "k": "Tensile strength", "v": "≥ 1,220 MPa" }
+      ],
+      "footText": "Full specification & drawing",
+      "footLink": { "label": "Open model page", "href": "/products/din912-m6x20-12-9-bo/" }
+    }
+  },
+  "categories": {
+    "eyebrow": "Products",
+    "h2": "Products by Standard",
+    "customCard": {
+      "name": "Custom Cold-Formed Parts",
+      "std": "To your STEP / PDF drawing",
+      "params": "Samples in 15 days · MOQ 100,000 pcs",
+      "href": "/custom-cold-formed-parts/",
+      "icon": "cat-custom",
+      "iconAlt": "Icon: custom cold-formed part to drawing"
+    }
+  },
+  "process": {
+    "eyebrow": "Process & numbers",
+    "h2": "From Wire to Sorted Part, In-House",
+    "carrierModel": "DIN912-M6x20-12.9-BO",
+    "carrierAlt": "Line drawing of DIN 912 M6×20 socket head cap screw with the four process stages: cold heading, thread rolling, heat treatment, optical sorting",
+    "steps": [
+      { "title": "Cold heading", "text": "Multi-station cold headers form head and shank from wire in one pass, no material cut away." },
+      { "title": "Thread rolling", "text": "Threads are rolled, not cut, to tolerance 6g; the unbroken grain flow gives higher fatigue strength." },
+      { "title": "Heat treatment", "badge": "In-house", "text": "Our mesh-belt furnace hardens and tempers to class 10.9 and 12.9. No outside heat treater." },
+      { "title": "100% optical sorting", "text": "Every automotive part passes camera sorting for dimensional and surface defects before packing." }
+    ],
+    "photo": {
+      "todo": "[待确认：车间实拍]",
+      "alt": "[待确认：车间实拍] Cold heading workshop, Mingyue Fastener, Wenling",
+      "caption": "Multi-station cold heading line, Wenling plant",
+      "spec": "4:3 · landscape · ≥ 1600 px · no flash"
+    },
+    "counters": [
+      { "num": "100", "suffix": "%", "sr": "100%", "label": "Optically sorted, automotive", "accent": true, "count": true },
+      { "num": "15", "suffix": " days", "sr": "15 days", "label": "Custom sample lead time", "count": true },
+      { "num": "180", "suffix": " million", "sr": "180 million", "label": "Pieces per year", "count": true },
+      { "num": "IATF", "suffix": " 16949", "sr": "IATF 16949", "label": "Certified 2023 [待确认：证书扫描件]", "count": false }
+    ]
+  },
+  "quality": {
+    "eyebrow": "Certificates & downloads",
+    "h2": "Certificates & Downloads",
+    "lead": "Your audit file, ready to download: ISO 9001:2015, IATF 16949 and the SGS RoHS report as PDF. EN 10204 3.1 inspection certificates on request per size.",
+    "certs": [
+      { "name": "ISO 9001:2015", "meta": "Recertified 2024", "todo": "[待确认：证书扫描件]", "alt": "ISO 9001:2015 certificate, Mingyue Fastener Co., Ltd. [待确认：证书扫描件]" },
+      { "name": "IATF 16949", "meta": "Certified 2023", "todo": "[待确认：证书扫描件]", "alt": "IATF 16949 certificate, Mingyue Fastener Co., Ltd. [待确认：证书扫描件]" },
+      { "name": "SGS RoHS test report", "meta": "Materials", "todo": "[待确认：报告扫描件]", "alt": "SGS RoHS test report [待确认：报告扫描件]" }
+    ],
+    "downloadLabel": "Download PDF",
+    "pdfComing": "PDF coming",
+    "link": { "label": "EN 10204 3.1 sample certificate · request per size", "href": "/quality-downloads/#material-certificates" }
+  },
+  "ctaMid": {
+    "h2": "Need a certificate or 3.1 report for a specific size?",
+    "sub": "Tell us the standard, size and class. The quotation lists which certificates and 3.1 documentation ship with the parts.",
+    "primary": { "label": "Request a Quote", "href": "/contact/?topic=certificate" },
+    "link": { "label": "Download Certificates", "href": "/quality-downloads/#certificates" }
+  },
+  "custom": {
+    "eyebrow": "Custom parts",
+    "h2": "Custom Cold-Formed Parts to Your Drawing",
+    "body": "Send a STEP or PDF drawing. We review it for cold-heading feasibility, build the tooling and ship samples in 15 days. Cold heading first, secondary turning where the geometry needs it. One current part, a washer-faced special bolt in SCM435, runs at 2 million pieces a year. MOQ 100,000 pieces; first-order lead time 35–40 days.",
+    "flow": ["Drawing review", "DFM feedback", "Tooling", "Sample in 15 days", "PPAP [待确认：是否提供] & production"],
+    "link": { "label": "See the custom process", "href": "/custom-cold-formed-parts/#process" },
+    "figureAlt": "Illustration of a washer-faced special bolt in SCM435, custom cold-formed part — redrawn, not a customer drawing",
+    "figureTitle": "Washer-faced special bolt, SCM435 — redrawn illustration",
+    "figcaption": "Redrawn illustration. Customer drawings are never published."
+  }
+}

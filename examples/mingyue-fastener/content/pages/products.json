@@ -1,0 +1,33 @@
+{
+  "h1": "Fasteners by Standard and Size",
+  "intro": "Filter by standard, thread, length, property class, surface and application, or type a model string such as DIN912-M6x20. Every row opens a full specification.",
+  "filters": {
+    "title": "Filters",
+    "clear": "Clear filters",
+    "groups": [
+      { "key": "category", "label": "Category" },
+      { "key": "standard", "label": "Standard", "placeholder": "[待确认：自攻钉标准号]" },
+      { "key": "thread", "label": "Thread", "placeholder": "[待确认：规格范围，D20]" },
+      { "key": "length", "label": "Length" },
+      { "key": "class", "label": "Property class", "placeholder": "[待确认：其他等级，D20]" },
+      { "key": "surface", "label": "Surface", "placeholder": "[待确认：其他表面处理，D20]" },
+      { "key": "application", "label": "Application", "values": ["Automotive", "Machinery", "Distribution"], "placeholder": "[待确认：应用分类，D20]" }
+    ]
+  },
+  "table": {
+    "head": ["Model", "Standard", "Thread × length", "Class", "Surface", "Salt spray"],
+    "placeholderRow": "[待确认：D18 代表型号 3–50]",
+    "placeholderRelated": "[待确认：D18 同类型号]",
+    "resultsLabel": "results",
+    "resultsLabelOne": "result",
+    "empty": "No size matches these filters.",
+    "emptyLink": { "label": "See custom cold-formed parts", "href": "/custom-cold-formed-parts/" }
+  },
+  "tail": {
+    "text": "Size or geometry not listed? We make parts to your drawing too, with samples in 15 days.",
+    "link": { "label": "See custom cold-formed parts", "href": "/custom-cold-formed-parts/" }
+  },
+  "ctaEnd": {
+    "primary": { "label": "Request a Quote", "href": "/contact/?topic=not-listed" }
+  }
+}

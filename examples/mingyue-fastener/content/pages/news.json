@@ -1,0 +1,11 @@
+{
+  "h1": "News & Trade Fairs",
+  "items": [
+    { "h2": "Fastener Fair Global, Stuttgart, Germany", "text": "Fastener Fair Global, Stuttgart, Germany — [待确认：展会日期，D14], stand [待确认：展位号，D14]. We exhibit every year. Bring your drawings or part numbers for a quotation after the show." },
+    { "h2": "Shanghai fastener show [待确认：展会官方名称，D24]", "text": "Shanghai fastener show [待确认：展会官方名称，D24] — [待确认：展会日期，D24], stand [待确认：展位号，D24]. We exhibit every year." }
+  ],
+  "ctaEnd": {
+    "_note": "文案稿 P7 未给页尾 CTA 标题，沿用首页 H7（同型号页 M-9 做法），待文案回流",
+    "primary": { "label": "Request a Quote", "href": "/contact/?topic=fair" }
+  }
+}

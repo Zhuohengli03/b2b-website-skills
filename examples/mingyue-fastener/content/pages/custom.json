@@ -1,0 +1,54 @@
+{
+  "h1": "Custom Cold-Formed Parts to Your Drawing",
+  "sub": "Send a STEP or PDF drawing. Cold heading first, secondary turning where needed, samples in 15 days, first production run in 35–40 days. MOQ 100,000 pieces per part.",
+  "primary": { "label": "Request a Quote", "href": "/contact/?topic=custom" },
+  "secondary": { "label": "See the Process", "href": "#process" },
+  "figureTitle": "Washer-faced special bolt, SCM435 — redrawn illustration",
+  "figureAlt": "Illustration of a washer-faced special bolt in SCM435, custom cold-formed part — redrawn, not a customer drawing",
+  "figcaption": "Redrawn illustration — customer drawings are never published.",
+  "process": {
+    "h2": "From drawing to production",
+    "steps": [
+      { "title": "Drawing review", "text": "Send STEP or PDF with material, class, finish and quantity; we confirm what cold heading can form and where turning is needed. [待确认：审核时限，D21]" },
+      { "title": "DFM feedback", "text": "You receive a feasibility note: suggested radii, head-to-shank ratios, tolerances and any secondary operation, before tooling is cut. [待确认：时限，D21]" },
+      { "title": "Tooling", "text": "Cold-heading dies are made for your part. Tooling cost and ownership [待确认：模具费用与归属，D21]; tooling lead time [待确认：模具周期，D21]." },
+      { "title": "Sample in 15 days", "text": "First samples typically ship within 15 days for your dimensional check and fit test. Sample cost [待确认：样品费，D21]." },
+      { "title": "PPAP [待确认：是否提供，D19]", "text": "For automotive programs, PPAP documentation is submitted with the samples; otherwise an inspection report accompanies them." },
+      { "title": "Mass production", "text": "First order: 35–40 days lead time, MOQ 100,000 pieces per part. Repeat-order lead time [待确认：返单交期，D21]." }
+    ]
+  },
+  "capability": {
+    "h2": "What we can form",
+    "rows": [
+      { "k": "Material", "v": "SCM435 alloy steel [待确认：其他材料，D20]" },
+      { "k": "Wire diameter", "v": "[待确认：线径范围]" },
+      { "k": "Length", "v": "[待确认：长度范围]" },
+      { "k": "Property class", "v": "10.9, 12.9 [待确认：非标等级范围，D20]" },
+      { "k": "Surface", "v": "Black oxide, zinc flake coating (Dacromet-type) [待确认：其他表面处理，D20]" },
+      { "k": "Process", "v": "Multi-station cold heading, thread rolling, secondary turning where needed" },
+      { "k": "Heat treatment", "v": "In-house, mesh-belt furnace line" },
+      { "k": "Inspection", "v": "100% optical sorting (automotive), spectrometer, salt-spray test" },
+      { "k": "MOQ", "v": "100,000 pieces per part" },
+      { "k": "Lead time", "v": "Samples typically 15 days · first order 35–40 days" }
+    ]
+  },
+  "case": {
+    "h2": "In production",
+    "title": "Washer-faced special bolt, SCM435",
+    "text": "Washer-faced special bolt, SCM435 — cold-formed to the customer's drawing in SCM435 alloy steel, running at 2 million pieces a year. Customer: [待确认：客户名与行业，D5].",
+    "figureAlt": "Redrawn illustration of a washer-faced special bolt, SCM435, custom cold-formed part"
+  },
+  "faq": {
+    "h2": "Questions about custom parts",
+    "items": [
+      { "q": "Cold heading or machining — which is right for my part?", "a": "Cold heading forms the part from wire at room temperature with almost no scrap, so unit cost drops sharply at volume and the grain flow follows the head shape. Machining suits low volumes or geometry that cannot be formed. We cold-head first and add turning only where the drawing needs it." },
+      { "q": "What is the minimum order for a custom part?", "a": "100,000 pieces per part. Tooling is dedicated to your geometry, so the quantity has to carry it; the first order ships in 35–40 days. Standard DIN / ISO parts start at 50,000 pieces per size." },
+      { "q": "What do samples cost?", "a": "Sample cost [待确认：样品费，D21]. Samples typically ship within 15 days. Send the annual quantity with your drawing; it determines the tooling route and the sample quotation." },
+      { "q": "Is my drawing kept confidential?", "a": "Your drawings go to the project team only and never appear on this site; the part shown above is a redrawn illustration, not a customer file. NDA on request [待确认：是否签署 NDA，D21]." }
+    ]
+  },
+  "ctaEnd": {
+    "title": "Send your drawing, get samples in 15 days",
+    "primary": { "label": "Request a Quote", "href": "/contact/?topic=custom" }
+  }
+}

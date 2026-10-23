@@ -1,0 +1,41 @@
+{
+  "h1": "Frequently Asked Questions",
+  "groups": [
+    {
+      "id": "standards",
+      "h2": "Standards & grades",
+      "items": [
+        { "q": "ISO 4762 or DIN 912 — which should I specify?", "a": "Both numbers describe the same hexagon socket head cap screw. DIN 912 is withdrawn and ISO 4762 is the current standard, so German distributors list the ISO number first; the dimensions you receive are identical. We mark every size with both numbers and accept either on your purchase order. Fine-pitch threads are covered by ISO 12474." },
+        { "q": "What is the difference between class 12.9 and 10.9?", "a": "Both are property classes to ISO 898-1; the first digit gives the nominal tensile strength, the second the yield-to-tensile ratio, so 12.9 is the stronger and harder of the two. Choose 12.9 where clamp load per bolt matters most, typically socket head cap screws in machine building; choose 10.9 for automotive flange bolts, where the lower hardness gives more margin against hydrogen embrittlement. Our DIN 912 M6 × 20 in 12.9 tests at ≥ 1,220 MPa." },
+        { "q": "Black oxide, zinc plated or zinc flake?", "a": "Black oxide is a thin conversion coating with minimal corrosion protection, usual for socket head cap screws used indoors with oil. Zinc plating is electrolytic and gives moderate protection. Zinc flake coating (Dacromet-type) is applied without electrolysis, so it suits class 10.9 and above where hydrogen embrittlement must be avoided; our DIN 6921 10.9 flange bolts reach ≥ 720 h salt spray. Zinc plating on our parts [待确认：是否提供，D20]." },
+        { "q": "Do you supply inch sizes for the US market?", "a": "Production is metric to DIN / ISO. Each model page shows the inch conversion of thread and length so you can cross-reference, and property class 10.9 is commonly cross-referenced to SAE Grade 8. Inch-series production [待确认：是否供应英制，D20]." }
+      ]
+    },
+    {
+      "id": "ordering",
+      "h2": "Ordering",
+      "items": [
+        { "q": "What is your MOQ?", "a": "50,000 pieces per size for standard DIN / ISO parts; 100,000 pieces per part for custom cold-formed parts, because tooling is dedicated to your geometry." },
+        { "q": "What is the lead time?", "a": "Standard parts: 20–25 days. Custom parts: samples typically in 15 days, then 35–40 days for the first production order. Repeat-order lead time for custom parts [待确认：返单交期，D21]. The lead time is confirmed on each quotation." },
+        { "q": "What are the payment terms?", "a": "30% T/T deposit, 70% against copy of the bill of lading. Repeat customers can be offered open account, 30 days. Currency [待确认：USD/EUR，D21]." },
+        { "q": "Which Incoterms and port?", "a": "FOB Ningbo as standard; CIF to your destination port on request. Packing specification and pallet details [待确认：包装规格，D21]." },
+        { "q": "Can I get a price per 1,000 pieces?", "a": "Prices are quoted per order, not listed, because they depend on size, class, finish, annual quantity and the steel price at the time of order. Send standard, size, class, finish and quantity and you receive a quotation with MOQ and lead time." },
+        { "q": "How do I get samples?", "a": "For custom parts, send a STEP or PDF drawing; samples typically ship within 15 days. For standard parts, state the model string and quantity [待确认：标准件样品政策，D21]. Sample cost [待确认：样品费，D21]." }
+      ]
+    },
+    {
+      "id": "compliance",
+      "h2": "Compliance & markets",
+      "items": [
+        { "q": "Can you provide an EN 10204 3.1 inspection certificate?", "a": "Yes. A 3.1 inspection certificate reports the chemical composition and mechanical test results of the delivered lot and is issued per batch [待确认：是否每批默认提供，D11]. A redacted sample is on the Quality & Downloads page; request one for a specific size with the button on each model page." },
+        { "q": "Do you provide CBAM emission data?", "a": "CBAM embedded-emission data for EU importers is available on request [待确认：D13]. The HS code (heading 7318) and the duty rate applicable at your destination are confirmed on the quotation." },
+        { "q": "Zylinderschrauben mit Innensechskant DIN 912 — do you supply German distributors?", "a": "Yes. Zylinderschrauben mit Innensechskant DIN 912 / ISO 4762 are our first product group, Germany is our largest export market, and customers include a German fastener distributor [待确认：客户名，D5]. Correspondence is in English." },
+        { "q": "Śruby imbusowe DIN 912 — do you ship to Poland?", "a": "Yes. Śruby imbusowe (socket head cap screws) and śruby kołnierzowe (flange bolts DIN 6921) ship to Poland regularly; an agricultural machinery manufacturer in Poland [待确认：客户名，D5] is among our customers. Correspondence is in English." }
+      ]
+    }
+  ],
+  "ctaEnd": {
+    "title": "Question not here? Ask us with your size and quantity",
+    "primary": { "label": "Request a Quote", "href": "/contact/" }
+  }
+}
