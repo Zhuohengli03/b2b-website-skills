@@ -107,7 +107,7 @@ Claude Code 当插件装：
 
 ## 版本
 
-- **0.1.0**：首个公开版。11 个 skill 蒸馏为单一的 B2B 询盘站流水线；新增个性化抓手、内部多方向探索、调性五刻度、版式级 AI 味自查、GEO 段落规则、Schema 事实更新（FAQPage 退役）、询盘表单细则、旧站判级与迁移台账、评审 What/Why/Fix 格式；四个脚本；完整示例与对照实验。参考了 marketingskills、claude-seo、geo-seo-claude、frontend-design、ux-ui-agent-skills、oil-ui、apple-design-skill、website-rebuild-skill、scroll-craft、squirrelscan 等仓库的做法，出处在各条规则末尾标注。
+- **0.1.0**：首个公开版。11 个 skill、4 个脚本、1 个完整示例。参考了 marketingskills、claude-seo、geo-seo-claude、frontend-design、ux-ui-agent-skills、oil-ui、apple-design-skill、website-rebuild-skill、scroll-craft、squirrelscan 等仓库的做法，出处在各条规则末尾标注。
 
 ## 致谢与许可
 

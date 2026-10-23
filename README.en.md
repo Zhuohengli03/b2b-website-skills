@@ -105,7 +105,7 @@ Also: `templates/建站需求表-客户版.md` (client brief) and `examples/ming
 
 ## Changelog
 
-- **0.1.0** — first public release. Eleven skills distilled into a single B2B inquiry-site pipeline; added personalisation hooks, internal multi-direction exploration, tone dials, layout-level AI-slop checklist, GEO paragraph rules, schema updates (FAQPage retired), inquiry-form rules, old-site grading and migration ledger, What/Why/Fix review format; four scripts; full example and a one-prompt baseline for comparison. Techniques borrowed from marketingskills, claude-seo, geo-seo-claude, frontend-design, ux-ui-agent-skills, oil-ui, apple-design-skill, website-rebuild-skill, scroll-craft and squirrelscan are credited inline.
+- **0.1.0** — first public release. Eleven skills, four scripts, one full example. Techniques borrowed from marketingskills, claude-seo, geo-seo-claude, frontend-design, ux-ui-agent-skills, oil-ui, apple-design-skill, website-rebuild-skill, scroll-craft and squirrelscan are credited inline.
 
 ## Credits and licence
 
