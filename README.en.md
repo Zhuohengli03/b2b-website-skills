@@ -60,21 +60,21 @@ Partial runs work too: "只给这个旧站做个体检" (audit this old site: ma
 
 ## What's inside
 
-Eleven skills, ~250k Chinese characters in total. Sizes are there for context budgeting.
+Eleven skills, ~200k Chinese characters in total; each SKILL.md body is ≤ 20 KB, with the detail in `references/` that sub-agents load per step. Sizes are there for context budgeting.
 
 | skill | Use on its own for | Highlights | Size |
 |---|---|---|---|
-| `b2b-run` | start / resume / status | Project tree, stage table, handoff checks, stops at gates, resumable RUN.md | 32 KB |
-| `b2b-project-manager` | brief intake, acceptance & launch handover | 12-item brief, asset gate, confirmation & rework rules (what counts as rework, freeze after a gate), batches what it needs from you five at a time | 44 KB |
-| `b2b-market-research` | competitors, keywords | Nine-dimension teardown of local competitors, three keyword tables, scrape-injection guard + raw archive | 24 KB |
-| `b2b-site-diagnosis` | old-site audit, site type, style | Company typing → site type → display tech → style & type → **four personalisation hooks** → CTA rhythm; old-site grading and migration ledger | 124 KB |
-| `b2b-copywriter` | English copy, Chinglish review | Every number in a fact-source table, `[待确认]` placeholders, Chinglish + AI-tells blacklists, swap-the-logo test, GEO-citable paragraphs | 24 KB |
-| `b2b-ui-designer` | direction sheet, hi-fi, review | Internal multi-direction exploration then convergence, five tone dials, product-as-carrier scroll scene, rationale + replaceability check, layout-level AI-slop checklist | 104 KB |
-| `b2b-frontend-dev` | test site, performance | No preloader, three-viewport render checks, isolated review, secrets & external links | 40 KB |
-| `b2b-backend-dev` | forms, domains, go-live | Inquiry pipeline (form → mail → backup → notify), CMS, i18n, DNS/SSL, security headers, AI-crawler robots | 20 KB |
-| `b2b-seo-specialist` | not ranking, schema, GEO | Technical SEO list, keyword placement, schema updates (FAQPage retired / Certification), GEO paragraph rules, monthly report four-parter | 24 KB |
-| `b2b-qa-tester` | pre-launch testing | P0–P3, What/Why/Fix citation format, `BLOCKING` verdict, ≤3 fix loops | 40 KB |
-| `b2b-growth-cs` | post-launch growth | Inquiry log, monthly report (for you / the boss), AI-visibility baseline, upgrading a quick-start site to a full inquiry site | 20 KB |
+| `b2b-run` | start / resume / status | Project tree, stage table, handoff checks, stops at gates, resumable RUN.md | 44 KB |
+| `b2b-project-manager` | brief intake, acceptance & launch handover | 12-item brief, asset gate, confirmation & rework rules (what counts as rework, freeze after a gate), batches what it needs from you five at a time | 32 KB |
+| `b2b-market-research` | competitors, keywords | Nine-dimension teardown of local competitors, three keyword tables, scrape-injection guard + raw archive | 18 KB |
+| `b2b-site-diagnosis` | old-site audit, site type, style | Company typing → site type → display tech → style & type → **four personalisation hooks** → CTA rhythm; old-site grading and migration ledger | 119 KB |
+| `b2b-copywriter` | English copy, Chinglish review | Every number in a fact-source table, `[待确认]` placeholders, Chinglish + AI-tells blacklists, swap-the-logo test, GEO-citable paragraphs | 20 KB |
+| `b2b-ui-designer` | direction sheet, hi-fi, review | Internal multi-direction exploration then convergence, five tone dials, product-as-carrier scroll scene, rationale + replaceability check, layout-level AI-slop checklist | 91 KB |
+| `b2b-frontend-dev` | test site, performance | No preloader, three-viewport render checks, isolated review, secrets & external links | 28 KB |
+| `b2b-backend-dev` | forms, domains, go-live | Inquiry pipeline (form → mail → backup → notify), CMS, i18n, DNS/SSL, security headers, AI-crawler robots | 17 KB |
+| `b2b-seo-specialist` | not ranking, schema, GEO | Technical SEO list, keyword placement, schema updates (FAQPage retired / Certification), GEO paragraph rules, monthly report four-parter | 18 KB |
+| `b2b-qa-tester` | pre-launch testing | P0–P3, What/Why/Fix citation format, `BLOCKING` verdict, ≤3 fix loops | 26 KB |
+| `b2b-growth-cs` | post-launch growth | Inquiry log, monthly report (for you / the boss), AI-visibility baseline, upgrading a quick-start site to a full inquiry site | 14 KB |
 
 Shared rules: `README-流水线总览.md`, `文件契约.md` (who writes and reads each file), `职责归属矩阵.md`.
 

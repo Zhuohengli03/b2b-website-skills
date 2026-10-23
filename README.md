@@ -64,21 +64,21 @@ Claude Code 当插件装：
 
 ## 里面有什么
 
-11 个 skill，总共约 25 万字中文。每个都按「你在这个环节会说什么 → 背后的意图 → 怎么满足 → 为什么」写，末尾有「流水线接口」写明输入、输出、完成判定和回流。体积是给上下文预算用的。
+11 个 skill，总共约 20 万字中文（正文每个 ≤ 20 KB，细则在各自的 `references/` 里，子 agent 按步只带需要的几份）。每个都按「你在这个环节会说什么 → 背后的意图 → 怎么满足 → 为什么」写，末尾有「流水线接口」写明输入、输出、完成判定和回流。体积是给上下文预算用的。
 
 | skill | 适合单独用在 | 亮点 | 体积 |
 |---|---|---|---|
-| [`b2b-run`](skills/b2b-run/SKILL.md) | 资料齐了开跑 / 续跑 / 查进度 | 建目录、按阶段表调用岗位、检查交接载荷、到闸停下、RUN.md 断点续跑 | 32 KB |
-| [`b2b-project-manager`](skills/b2b-project-manager/SKILL.md) | 需求采集、验收与上线交接 | 12 项需求单、素材门槛、确认与返工规则（什么算返工、过闸冻结）、要你补的东西一次攒 5 条问 | 44 KB |
-| [`b2b-market-research`](skills/b2b-market-research/SKILL.md) | 看同行、定关键词 | 目标市场本土同行九维度对照、三张关键词表、抓取防注入与 raw 留档 | 24 KB |
-| [`b2b-site-diagnosis`](skills/b2b-site-diagnosis/SKILL.md) | 旧站体检、站型、风格 | 公司分型 → 站型 → 展示技术 → 风格与字体 → **个性化抓手四条** → CTA 节律；旧站判级与迁移台账 | 124 KB |
-| [`b2b-copywriter`](skills/b2b-copywriter/SKILL.md) | 写英文、审中式英语 | 每个数字进事实来源表、`[待确认]` 占位、中式英语与 AI 腔黑名单、换标测试、GEO 可引用段落 | 24 KB |
-| [`b2b-ui-designer`](skills/b2b-ui-designer/SKILL.md) | 方向单、高保真、设计评审 | 内部多方向探索再收敛、调性五刻度、产品载体场景段、设计决策说明与可替换性自查、版式级 AI 味自查 | 104 KB |
-| [`b2b-frontend-dev`](skills/b2b-frontend-dev/SKILL.md) | 出测试站、性能、自查 | 不设 preloader、三档截图渲染级自查、隔离评审、密钥与外链检查 | 40 KB |
-| [`b2b-backend-dev`](skills/b2b-backend-dev/SKILL.md) | 表单收不到邮件、域名、上线 | 询盘链路（表单 → 邮件到达 → 备份 → 通知）、CMS、多语言、DNS/SSL、安全头、AI 爬虫 robots | 20 KB |
-| [`b2b-seo-specialist`](skills/b2b-seo-specialist/SKILL.md) | Google 搜不到、Schema、GEO | 技术 SEO 清单、关键词落位、Schema 事实更新（FAQPage 已退役 / Certification）、GEO 段落规则、月报四件套 | 24 KB |
-| [`b2b-qa-tester`](skills/b2b-qa-tester/SKILL.md) | 上线前测试 | P0–P3 分级、What/Why/Fix 引用格式、`BLOCKING` 结论、修复 ≤3 轮 | 40 KB |
-| [`b2b-growth-cs`](skills/b2b-growth-cs/SKILL.md) | 上线后增长运营 | 询盘台账、月报（给你 / 老板看）、AI 可见度基线、快速启动站升询盘站 | 20 KB |
+| [`b2b-run`](skills/b2b-run/SKILL.md) | 资料齐了开跑 / 续跑 / 查进度 | 建目录、按阶段表调用岗位、检查交接载荷、到闸停下、RUN.md 断点续跑 | 44 KB |
+| [`b2b-project-manager`](skills/b2b-project-manager/SKILL.md) | 需求采集、验收与上线交接 | 12 项需求单、素材门槛、确认与返工规则（什么算返工、过闸冻结）、要你补的东西一次攒 5 条问 | 32 KB |
+| [`b2b-market-research`](skills/b2b-market-research/SKILL.md) | 看同行、定关键词 | 目标市场本土同行九维度对照、三张关键词表、抓取防注入与 raw 留档 | 18 KB |
+| [`b2b-site-diagnosis`](skills/b2b-site-diagnosis/SKILL.md) | 旧站体检、站型、风格 | 公司分型 → 站型 → 展示技术 → 风格与字体 → **个性化抓手四条** → CTA 节律；旧站判级与迁移台账 | 119 KB |
+| [`b2b-copywriter`](skills/b2b-copywriter/SKILL.md) | 写英文、审中式英语 | 每个数字进事实来源表、`[待确认]` 占位、中式英语与 AI 腔黑名单、换标测试、GEO 可引用段落 | 20 KB |
+| [`b2b-ui-designer`](skills/b2b-ui-designer/SKILL.md) | 方向单、高保真、设计评审 | 内部多方向探索再收敛、调性五刻度、产品载体场景段、设计决策说明与可替换性自查、版式级 AI 味自查 | 91 KB |
+| [`b2b-frontend-dev`](skills/b2b-frontend-dev/SKILL.md) | 出测试站、性能、自查 | 不设 preloader、三档截图渲染级自查、隔离评审、密钥与外链检查 | 28 KB |
+| [`b2b-backend-dev`](skills/b2b-backend-dev/SKILL.md) | 表单收不到邮件、域名、上线 | 询盘链路（表单 → 邮件到达 → 备份 → 通知）、CMS、多语言、DNS/SSL、安全头、AI 爬虫 robots | 17 KB |
+| [`b2b-seo-specialist`](skills/b2b-seo-specialist/SKILL.md) | Google 搜不到、Schema、GEO | 技术 SEO 清单、关键词落位、Schema 事实更新（FAQPage 已退役 / Certification）、GEO 段落规则、月报四件套 | 18 KB |
+| [`b2b-qa-tester`](skills/b2b-qa-tester/SKILL.md) | 上线前测试 | P0–P3 分级、What/Why/Fix 引用格式、`BLOCKING` 结论、修复 ≤3 轮 | 26 KB |
+| [`b2b-growth-cs`](skills/b2b-growth-cs/SKILL.md) | 上线后增长运营 | 询盘台账、月报（给你 / 老板看）、AI 可见度基线、快速启动站升询盘站 | 14 KB |
 
 共同规则（三份，agent 之间的契约）：[`README-流水线总览.md`](README-流水线总览.md)、[`文件契约.md`](文件契约.md)（每个文件谁写谁读）、[`职责归属矩阵.md`](职责归属矩阵.md)。
 
