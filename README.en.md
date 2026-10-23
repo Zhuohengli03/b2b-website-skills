@@ -54,7 +54,7 @@ Or as a Claude Code plugin:
 4. After frontend delivers the test site, run `node scripts/check.mjs dist --perf --shots`; the last line must read `BLOCKING: false` before QA starts.
 5. Acceptance only after P0 / P1 and `[待确认]` are all cleared.
 
-Partial runs work too: "只给这个旧站做个体检" (audit this old site: reads about five pages and writes a one-file `旧站体检报告.md` in the current folder, no project tree), "继续跑下一阶段" (next stage), "这个项目跑到哪了" (status).
+Partial runs work too: "只给这个旧站做个体检" (audit this old site: may crawl the whole site, writes a one-file `旧站体检报告.md` in the current folder, no project tree, no time estimates), "继续跑下一阶段" (next stage), "这个项目跑到哪了" (status).
 
 **Assets are a hard gate.** An inquiry site needs 5 workshop / production-line photos, 3 photos per main product category, and certificate scans. Step 0 counts them and, if short, prints a shoot list and waits. Real photos have to be shot by you; the pipeline gives you a 10-photo minimum shot list and a phone shooting guide. Without them, the ceiling is what the example shows.
 
